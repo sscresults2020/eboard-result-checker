@@ -40,19 +40,37 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Exam Results BD",
-  "url": "https://examresultsbd.com/",
-  "description": "Independent information portal for SSC Result 2026 in Bangladesh.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Exam Results BD"
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://examresultsbd.com/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://examresultsbd.com/#organization",
+      "name": "Exam Results BD",
+      "url": "https://examresultsbd.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://examresultsbd.com/assets/eboard-result-logo.webp"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://examresultsbd.com/#website",
+      "url": "https://examresultsbd.com/",
+      "name": "Exam Results BD",
+      "description": "Independent information portal for SSC Result 2026, HSC Result, Dakhil Result, Alim Result and other Bangladesh Education Board examination results.",
+      "publisher": {
+        "@id": "https://examresultsbd.com/#organization"
+      },
+      "inLanguage": "en",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://examresultsbd.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
 }
 </script>
 <link rel="stylesheet" type="text/css" href="style.css">
