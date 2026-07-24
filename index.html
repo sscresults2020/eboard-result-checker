@@ -82,6 +82,84 @@
   ]
 }
 </script>
+  <!-- ============================================================
+     FAQ SCHEMA — paste this inside <head>, alongside your other
+     JSON-LD. It matches the eight FAQs above so Google can show
+     the expandable rich result.
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When will the SSC Result 2026 be published?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The SSC Result 2026 was originally set for 20 July 2026 but has been postponed. The education boards expect to publish it in the last week of July 2026, around 28-29 July, with the Ministry of Education confirming the final date. Results are traditionally released at 2:00 PM."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I check my SSC result with the full marksheet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Visit an official portal such as eboardresults.com or educationboardresults.gov.bd, select SSC, choose 2026 and your board, then enter both your roll number and registration number. Entering both displays the subject-wise marksheet rather than just the basic result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I check my result with only the roll number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can see your basic result and GPA with just the roll number, and by SMS you only need the roll. However, the full marksheet with subject-wise grades requires both the roll number and the registration number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the SMS format for the SSC Result 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Send SSC <BOARD> <ROLL> 2026 to 16222. For example, a Dhaka Board student types SSC DHA 123456 2026. Dakhil students start with DAKHIL and use MAD; vocational students use TEC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many education boards publish the SSC result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eleven boards publish simultaneously: nine general education boards (Dhaka, Rajshahi, Chattogram, Cumilla, Jashore, Sylhet, Barishal, Dinajpur, Mymensingh), the Madrasah Education Board (Dakhil), and the Technical Education Board (Vocational)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The result website is not loading. What should I do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On result day almost two million students visit at once, so the official servers slow down. Wait a few minutes and refresh with Ctrl + R, or use the SMS method to 16222, which does not depend on the website. Avoid entering your details on unofficial mirror sites."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I apply for re-scrutiny, and does it help?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After results, apply by SMS from a Teletalk SIM (format beginning with RSC) within the application window, paying roughly 125 to 150 Taka per subject. Re-scrutiny re-checks whether marks were added and recorded correctly rather than re-marking the paper, so apply only for subjects where you have a genuine reason to doubt the result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this an official education board website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This is an independent information website that explains the result process. Official results are published only by the education boards, through educationboardresults.gov.bd and eboardresults.com. If anything here ever differs from an official notice, the board's notice is the correct one."
+      }
+    }
+  ]
+}
+</script>
+
   
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6M0CP1M3Z1"></script>
@@ -838,7 +916,462 @@ Point
 
 <!-- ══ SECTION 2 — full SSC Result 2026 guide goes here ══ -->
 <section class="article" id="guide">
-  <div class="slot">Section 2 &mdash; the full SSC Result 2026 guide will be placed here.</div>
+  <!-- ============================================================
+     SECTION 2 — SSC RESULT 2026 COMPLETE GUIDE
+     Paste this whole block in place of the placeholder
+       <div class="slot">Section 2 — ...</div>
+     inside <section class="article" id="guide"> ... </section>
+
+     The <style> block is scoped under .guide so it will not
+     collide with style.css. Fonts/colours reuse your existing
+     CSS variables (--green, --gold, etc.).
+     ============================================================ -->
+
+<style>
+.guide{max-width:820px;margin:0 auto;font-size:1.02rem;line-height:1.72;color:#25322c}
+.guide .lede{font-size:1.14rem;line-height:1.6;color:#1b2a24;font-weight:400}
+.guide .lede strong{font-weight:600}
+.guide p{margin:0 0 1.1rem}
+.guide h2{font-family:var(--display,"Archivo",sans-serif);font-size:1.5rem;font-weight:800;color:var(--green-deep,#033a2c);
+  letter-spacing:-.02em;line-height:1.2;margin:2.6rem 0 .5rem;padding-top:1.4rem;border-top:2px solid var(--line,#dee5e0)}
+.guide h3{font-family:var(--display,"Archivo",sans-serif);font-size:1.14rem;font-weight:700;color:#123328;margin:1.7rem 0 .5rem}
+.guide h2 .num{font-family:var(--mono,monospace);font-size:.85rem;font-weight:600;color:var(--gold,#c08a1e);
+  display:block;letter-spacing:.12em;margin-bottom:.15rem}
+.guide a{color:var(--green,#05614a);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.guide strong{font-weight:600;color:#12211c}
+.guide em{font-style:italic}
+.guide ul,.guide ol{margin:0 0 1.2rem 1.3rem}
+.guide li{margin-bottom:.55rem}
+.guide li::marker{color:var(--green,#05614a);font-weight:700}
+
+/* table of contents */
+.guide .toc{background:var(--green-tint,#e7f0ec);border:1px solid #cfe0d8;border-radius:11px;padding:1.3rem 1.5rem;margin:1.6rem 0 2rem}
+.guide .toc h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:var(--green-deep,#033a2c);
+  margin:0 0 .8rem;padding:0;border:none;font-family:var(--body,sans-serif)}
+.guide .toc ol{margin:0;columns:2;column-gap:2rem;list-style-position:inside;font-size:.93rem}
+.guide .toc li{margin-bottom:.4rem}
+.guide .toc a{text-decoration:none;color:#20402f}
+.guide .toc a:hover{text-decoration:underline;color:var(--green,#05614a)}
+@media(max-width:560px){.guide .toc ol{columns:1}}
+
+/* key-fact box */
+.guide .keybox{background:#fff;border:1px solid var(--line,#dee5e0);border-left:5px solid var(--green,#05614a);
+  border-radius:10px;padding:1.2rem 1.4rem;margin:1.5rem 0}
+.guide .keybox h3{margin:0 0 .7rem;color:var(--green-deep,#033a2c)}
+.guide .keybox dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.1rem;margin:0}
+.guide .keybox dt{font-weight:600;color:#3a4842;font-size:.9rem}
+.guide .keybox dd{margin:0;font-size:.95rem}
+.guide .keybox dd b{color:var(--green-deep,#033a2c)}
+
+/* callouts */
+.guide .callout{border-radius:9px;padding:1rem 1.2rem;margin:1.4rem 0;font-size:.97rem}
+.guide .callout p:last-child{margin-bottom:0}
+.guide .gold{background:var(--gold-bg,#fdf6e5);border:1px solid var(--gold-line,#e8cf94);border-left:4px solid var(--gold,#c08a1e);color:#5f4408}
+.guide .gold strong{color:#5f4408}
+.guide .green{background:var(--green-tint,#e7f0ec);border:1px solid #cbded6;border-left:4px solid var(--green,#05614a);color:#20402f}
+.guide .green strong{color:var(--green-deep,#033a2c)}
+
+/* quote */
+.guide blockquote{margin:1.5rem 0;padding:.6rem 0 .6rem 1.4rem;border-left:4px solid var(--gold,#c08a1e);
+  font-size:1.08rem;line-height:1.6;color:#2f3d36;font-style:italic}
+.guide blockquote cite{display:block;margin-top:.5rem;font-size:.85rem;font-style:normal;color:var(--muted,#5f6d67)}
+
+/* tables */
+.guide .tw{overflow-x:auto;margin:1rem 0 1.5rem;border:1px solid var(--line,#dee5e0);border-radius:10px}
+.guide table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:440px}
+.guide thead th{background:var(--green,#05614a);color:#fff;text-align:left;font-family:var(--display,sans-serif);
+  font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.7rem .85rem}
+.guide tbody td{border-bottom:1px solid var(--line,#dee5e0);padding:.65rem .85rem;vertical-align:top;color:#2b3a34}
+.guide tbody tr:nth-child(even) td{background:#fafbfa}
+.guide tbody tr:hover td{background:var(--green-tint,#e7f0ec)}
+.guide td code,.guide .sms-code{font-family:var(--mono,monospace);font-weight:600;color:var(--green-deep,#033a2c);
+  background:var(--green-tint,#e7f0ec);padding:.1rem .4rem;border-radius:4px;font-size:.86rem}
+.guide .up{color:#0a7d40;font-weight:700}
+.guide .down{color:#c2283a;font-weight:700}
+
+/* bar chart */
+.guide .chart{margin:1.2rem 0 1.6rem;border:1px solid var(--line,#dee5e0);border-radius:10px;padding:1.3rem 1.4rem;background:#fff}
+.guide .chart .ct{font-family:var(--display,sans-serif);font-weight:700;font-size:.95rem;color:var(--green-deep,#033a2c);margin-bottom:1rem}
+.guide .bar{display:grid;grid-template-columns:66px 1fr 56px;align-items:center;gap:.7rem;margin-bottom:.7rem}
+.guide .bar .yr{font-family:var(--mono,monospace);font-size:.82rem;font-weight:600;color:#3a4842}
+.guide .bar .track{background:#eef2f0;border-radius:5px;height:22px;overflow:hidden}
+.guide .bar .fill{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--green,#05614a),#0a7d5c);
+  width:0;animation:grow 1.1s cubic-bezier(.2,.7,.3,1) forwards}
+.guide .bar .fill.low{background:linear-gradient(90deg,#b6802a,var(--gold,#c08a1e))}
+.guide .bar .val{font-family:var(--mono,monospace);font-size:.82rem;font-weight:700;color:var(--green-deep,#033a2c);text-align:right}
+@keyframes grow{from{width:0}}
+.guide .chart .cap{font-size:.79rem;color:var(--muted,#5f6d67);margin-top:.6rem;line-height:1.5}
+
+/* figure / image */
+.guide figure{margin:1.5rem 0;border:1px solid var(--line,#dee5e0);border-radius:10px;overflow:hidden;background:#fff}
+.guide figure img{width:100%;height:auto;display:block}
+.guide figcaption{font-size:.82rem;color:var(--muted,#5f6d67);padding:.6rem .9rem;background:#fafbfa;border-top:1px solid var(--line,#dee5e0)}
+
+/* steps */
+.guide .steps{counter-reset:step;list-style:none;margin:1.2rem 0 1.5rem;padding:0}
+.guide .steps li{counter-increment:step;position:relative;padding:0 0 1.1rem 3rem;margin:0}
+.guide .steps li::before{content:counter(step);position:absolute;left:0;top:-2px;width:2rem;height:2rem;
+  background:var(--green,#05614a);color:#fff;font-family:var(--display,sans-serif);font-weight:800;font-size:.95rem;
+  border-radius:50%;display:flex;align-items:center;justify-content:center}
+.guide .steps li:not(:last-child)::after{content:"";position:absolute;left:.97rem;top:2rem;bottom:0;width:2px;background:#d3e0d9}
+.guide .steps li strong{display:block;margin-bottom:.15rem;color:#12211c}
+
+/* faq */
+.guide details{border:1px solid var(--line,#dee5e0);border-radius:9px;margin-bottom:.7rem;background:#fff;overflow:hidden}
+.guide details[open]{border-color:#bcd2c8}
+.guide summary{cursor:pointer;padding:.95rem 1.2rem;font-family:var(--display,sans-serif);font-weight:700;font-size:1rem;
+  color:var(--green-deep,#033a2c);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.guide summary::-webkit-details-marker{display:none}
+.guide summary::after{content:"+";font-size:1.4rem;font-weight:400;color:var(--gold,#c08a1e);transition:transform .2s;flex-shrink:0}
+.guide details[open] summary::after{transform:rotate(45deg)}
+.guide details .a{padding:0 1.2rem 1.1rem;font-size:.96rem;color:#2b3a34}
+.guide details .a p{margin:0 0 .7rem}
+.guide details .a p:last-child{margin:0}
+
+.guide .updated{font-family:var(--mono,monospace);font-size:.75rem;color:var(--muted,#5f6d67);text-transform:uppercase;
+  letter-spacing:.06em;margin-bottom:1.2rem}
+.guide .end{margin-top:2.4rem;padding-top:1.5rem;border-top:2px solid var(--line,#dee5e0);font-size:.9rem;color:var(--muted,#5f6d67)}
+
+@media (prefers-reduced-motion: reduce){
+  .guide .fill{animation:none;width:var(--w,0)}
+  .guide *{transition:none!important}
+}
+</style>
+
+<article class="guide">
+
+  <p class="updated">Updated 25 July 2026</p>
+
+  <p class="lede">The <strong>SSC Result 2026</strong> is almost here, and if you sat the exams this year you already know the feeling &mdash; that restless mix of hope and nerves that shows up every time someone mentions the word <em>result</em>. This guide pulls together everything you actually need in one place: the <strong>SSC result 2026 published date and time</strong>, how to check your result online with your roll and registration number, the exact SMS format for every board, how to read your <strong>full marksheet</strong>, and what to do next &mdash; whether your result is brilliant, disappointing, or somewhere in between.</p>
+
+  <p>We have kept the language plain and the facts current. Where a date has not been officially fixed yet, we say so rather than pretend. And one thing before we start, because it matters: this is an independent information site, not an education board. Your official result comes from the boards themselves &mdash; we just make the wait a little less confusing.</p>
+
+  <p>The <strong>Secondary School Certificate</strong>, or SSC, is one of the two great public examinations of Bangladeshi school life, taken at the end of Class 10 under the country's education boards. For most students it is the first exam that feels genuinely national in scale &mdash; the same papers, the same days, the same nervous wait, shared with nearly two million others. This year, a total of <strong>18,57,344 candidates</strong> registered across the 11 boards, split almost evenly between <strong>9,30,305 male</strong> and <strong>9,27,039 female</strong> students, sitting from <strong>30,666 institutions</strong> at <strong>3,885 centres</strong> nationwide. Of those, roughly 14.2 lakh sat under the general boards, about 3 lakh under the Madrasah Board for Dakhil, and the remainder under the Technical Board. Whichever group you belong to, this guide covers your result.</p>
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <h2>What this guide covers</h2>
+    <ol>
+      <li><a href="#date">Result date &amp; time</a></li>
+      <li><a href="#why-late">Why it was delayed</a></li>
+      <li><a href="#online">Check online (roll number)</a></li>
+      <li><a href="#sms">Check by SMS (16222)</a></li>
+      <li><a href="#board-codes">All 11 board SMS codes</a></li>
+      <li><a href="#marksheet">Result with marksheet</a></li>
+      <li><a href="#gpa">Understanding your GPA</a></li>
+      <li><a href="#stats">Pass rate &amp; past trends</a></li>
+      <li><a href="#boards">The 11 boards explained</a></li>
+      <li><a href="#rescrutiny">Re-scrutiny (board challenge)</a></li>
+      <li><a href="#admission">College (class XI) admission</a></li>
+      <li><a href="#after">What to do after the result</a></li>
+      <li><a href="#tips">Result-day tips</a></li>
+      <li><a href="#faq">Frequently asked questions</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. DATE -->
+  <h2 id="date"><span class="num">01</span>SSC Result 2026 Date and Time</h2>
+  <p>Here is the short version, because it is the one thing everyone opens this page for. The SSC and equivalent examinations of 2026 began on <strong>21 April 2026</strong>, and the written papers under the nine general boards finished on <strong>20 May 2026</strong>. The results were <em>originally</em> announced for <strong>20 July 2026</strong>. That date has now been postponed, and the boards expect to publish in the <strong>last week of July 2026</strong>, with most reporting pointing to <strong>on or shortly after 28&ndash;29 July</strong>.</p>
+
+  <div class="keybox">
+    <h3>SSC Result 2026 &mdash; key facts at a glance</h3>
+    <dl>
+      <dt>Exam started</dt><dd>21 April 2026</dd>
+      <dt>Written exams ended</dt><dd>20 May 2026 (general boards)</dd>
+      <dt>Original date</dt><dd>20 July 2026 <span class="down">(postponed)</span></dd>
+      <dt>Expected date</dt><dd><b>Last week of July 2026</b> (around 28&ndash;29 July)</dd>
+      <dt>Publish time</dt><dd>Traditionally <b>2:00 PM</b>; online &amp; SMS open together</dd>
+      <dt>Total candidates</dt><dd>18,57,344 across 11 boards</dd>
+      <dt>Official portals</dt><dd>educationboardresults.gov.bd &middot; eboardresults.com</dd>
+    </dl>
+  </div>
+
+  <div class="callout gold">
+    <p><strong>Please note:</strong> the Ministry of Education has not yet fixed the final publication date in writing. Treat &ldquo;end of July&rdquo; as the strong expectation, not a confirmed appointment. We update this page the moment an official date is announced, so bookmark it and check the announcement bar at the top.</p>
+  </div>
+
+  <p>On a normal result day the process follows a set order. The Education Minister and the board chairmen hand a summary of the results to the head of government, a short press briefing shares the national pass rate and GPA-5 figures, and then &mdash; at <strong>2:00 PM</strong> &mdash; the results go live for everyone at once. All <strong>11 education boards</strong> publish simultaneously, and the SMS service switches on at the same minute. In 2025 the handover ceremony was skipped and boards released figures independently, so the ceremony itself can change year to year; the 2:00 PM online release is the part that stays consistent.</p>
+
+  <!-- 2. WHY LATE -->
+  <h2 id="why-late"><span class="num">02</span>Why the SSC Result 2026 Was Delayed</h2>
+  <p>The original 20 July date came from the Education Minister at a press conference on 8 June 2026. So why the change? According to the President of the Inter-Education Board Coordination Committee, the boards simply could not finish evaluating and compiling results in time, citing recent disruption among the reasons. Their message was straightforward: the preparation would be completed within about a week, after which the ministry would set the new date.</p>
+
+  <blockquote>
+    &ldquo;We were instructed to prepare the results by July 20, but could not complete the work for several reasons. The final decision on the publication date rests with the ministry.&rdquo;
+    <cite>&mdash; Inter-Education Board Coordination Committee, reported July 2026</cite>
+  </blockquote>
+
+  <p>For students, a short delay changes nothing about the outcome &mdash; your marks are your marks. What it <em>does</em> mean is a few more days of waiting, and a good reason to be careful about which &ldquo;date&rdquo; you trust. Every year, a wave of pages and social posts announce a confident result date that turns out to be a guess. Rely on official board notices and established news outlets, and ignore screenshots that circulate without a source.</p>
+
+  <!-- 3. ONLINE -->
+  <h2 id="online"><span class="num">03</span>How to Check SSC Result 2026 Online</h2>
+  <p>Checking online is the most popular method because it shows your <strong>full marksheet</strong> with subject-wise grades, not just a pass/fail line. You will need two things from your exam documents: your <strong>6-digit roll number</strong> (on your admit card) and your <strong>10-digit registration number</strong> (on your registration card). Keep both beside you before you start.</p>
+
+  <ol class="steps">
+    <li><strong>Open an official portal</strong> Go to <a href="https://eboardresults.com/v2/home" target="_blank" rel="noopener">eboardresults.com</a> or <a href="https://www.educationboardresults.gov.bd/v2/home" target="_blank" rel="noopener">educationboardresults.gov.bd</a>. The checker at the top of this page also opens the official portal for you.</li>
+    <li><strong>Select the examination</strong> Choose <em>SSC/Dakhil/Equivalent</em> (or <em>SSC Vocational</em> if that is your exam).</li>
+    <li><strong>Select the year</strong> Choose <strong>2026</strong>.</li>
+    <li><strong>Select your board</strong> Pick the board printed on your admit card &mdash; Dhaka, Rajshahi, Chattogram, and so on.</li>
+    <li><strong>Enter your roll and registration number</strong> Type them carefully. The roll alone shows the basic result; both together unlock the full marksheet.</li>
+    <li><strong>Solve the security check</strong> Answer the simple sum or captcha shown &mdash; this stops automated abuse of the server.</li>
+    <li><strong>Press &ldquo;Get Result&rdquo;</strong> Your result appears on screen. Take a screenshot or use the print option to save a copy.</li>
+  </ol>
+
+  <div class="callout green">
+    <p><strong>Server busy on result day?</strong> This is completely normal. Nearly two million students refresh the same site within minutes of 2:00 PM, and the official servers slow down under that load. Do not panic and do not enter your details on random &ldquo;mirror&rdquo; sites. Wait a few minutes, refresh with <span class="sms-code">Ctrl + R</span>, or use the SMS method below, which does not depend on the website at all.</p>
+  </div>
+
+  <!-- 4. SMS -->
+  <h2 id="sms"><span class="num">04</span>How to Check SSC Result 2026 by SMS</h2>
+  <p>The SMS method is the quiet hero of result day. It needs no internet, works on the simplest phone, and keeps working when the website is crawling. It costs a small amount per message (standard operator charge), and it delivers your GPA and pass status straight to your inbox.</p>
+
+  <p>Open your phone's message app and send a message in this format to <strong>16222</strong>:</p>
+
+  <div class="callout green">
+    <p style="font-family:var(--mono,monospace);font-size:1.05rem;font-weight:600;color:var(--green-deep,#033a2c);margin:0;text-align:center">
+      SSC &nbsp;&lt;BOARD&gt;&nbsp; &lt;ROLL&gt; &nbsp;2026
+    </p>
+  </div>
+
+  <p>The <strong>&lt;BOARD&gt;</strong> part is the first three letters of your board's English name. For example, a Dhaka Board student with roll 123456 would type <span class="sms-code">SSC DHA 123456 2026</span> and send it to 16222. Within a short while, a return SMS arrives with the result. For <strong>Dakhil</strong> (madrasah) students, replace <em>SSC</em> with <em>DAKHIL</em>; for <strong>SSC Vocational</strong>, use <em>SSC TEC</em> as shown in the table below.</p>
+
+  <!-- 5. BOARD CODES -->
+  <h2 id="board-codes"><span class="num">05</span>SMS Codes for All 11 Education Boards</h2>
+  <p>Here is the complete list of board codes for the SMS method. Find your board, use its three-letter code, and you are set.</p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Education Board</th><th>SMS Code</th><th>Example (roll 123456)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dhaka</td><td><code>DHA</code></td><td>SSC DHA 123456 2026</td></tr>
+        <tr><td>Rajshahi</td><td><code>RAJ</code></td><td>SSC RAJ 123456 2026</td></tr>
+        <tr><td>Chattogram</td><td><code>CHI</code></td><td>SSC CHI 123456 2026</td></tr>
+        <tr><td>Cumilla</td><td><code>COM</code></td><td>SSC COM 123456 2026</td></tr>
+        <tr><td>Jashore</td><td><code>JES</code></td><td>SSC JES 123456 2026</td></tr>
+        <tr><td>Sylhet</td><td><code>SYL</code></td><td>SSC SYL 123456 2026</td></tr>
+        <tr><td>Barishal</td><td><code>BAR</code></td><td>SSC BAR 123456 2026</td></tr>
+        <tr><td>Dinajpur</td><td><code>DIN</code></td><td>SSC DIN 123456 2026</td></tr>
+        <tr><td>Mymensingh</td><td><code>MYM</code></td><td>SSC MYM 123456 2026</td></tr>
+        <tr><td>Madrasah (Dakhil)</td><td><code>MAD</code></td><td>DAKHIL MAD 123456 2026</td></tr>
+        <tr><td>Technical (Vocational)</td><td><code>TEC</code></td><td>SSC TEC 123456 2026</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout gold">
+    <p><strong>Tip:</strong> type the message <em>before</em> 2:00 PM on result day and keep it ready in your drafts. The moment results go live, hit send &mdash; you will often get your result by SMS before the website finishes loading.</p>
+  </div>
+
+  <!-- 6. MARKSHEET -->
+  <h2 id="marksheet"><span class="num">06</span>SSC Result 2026 with Marksheet (Subject-Wise Number)</h2>
+  <p>Most students want more than a GPA &mdash; they want the <strong>full marksheet</strong>, showing the grade in every subject. This is where the online method wins, because SMS only returns your GPA and pass status.</p>
+  <p>To see your <strong>SSC result 2026 with marksheet</strong>, use the online steps in section 3 and make sure you enter <em>both</em> your roll and registration number. The individual result page then displays each subject with its letter grade and grade point, along with your overall GPA. From there you can screenshot it or use your browser's print option to save a PDF copy for college admission.</p>
+
+  <div class="callout green">
+    <p><strong>Grade sheet vs. certificate.</strong> The marksheet you see online right after results is the <em>provisional</em> grade sheet. The original printed grade sheet and certificate are distributed later through your school or college. For class XI admission, the online grade sheet is accepted &mdash; you do not need to wait for the printed copy to start applying.</p>
+  </div>
+
+  <h3>What your marksheet actually shows</h3>
+  <p>When the full result loads, you are looking at more than a single number. A typical SSC marksheet lists your name, roll and registration, your board and institution, your group (science, humanities or business studies), and then the heart of it: a row for every subject with its <strong>letter grade</strong> and <strong>grade point</strong>. Compulsory subjects like Bangla and English appear alongside your group subjects, and your optional 4th subject is listed too. At the bottom sits your overall <strong>GPA</strong> and your result status.</p>
+  <p>It is worth checking each row carefully rather than jumping straight to the GPA. Occasionally a student spots a subject that looks lower than expected, and that single row is exactly the kind of thing the re-scrutiny process (section 9) exists to re-check. Read the whole sheet before you decide whether you are happy with it.</p>
+
+  <h3>Saving and printing your marksheet</h3>
+  <p>Once your marksheet is on screen, save it immediately &mdash; result-day servers are unpredictable and you do not want to be hunting for it again an hour later. On a phone, a screenshot is fastest; on a computer, use your browser's print option and choose <em>Save as PDF</em>. Keep a copy in your email or cloud storage as well, because you will be uploading or showing this grade sheet repeatedly during college admission.</p>
+
+  <!-- 7. GPA -->
+  <h2 id="gpa"><span class="num">07</span>Understanding Your GPA and Grades</h2>
+  <p>Bangladesh uses a <strong>Grade Point Average (GPA)</strong> system on a scale from 1.00 to 5.00. The top grade, <strong>GPA 5.00</strong>, is what everyone calls <strong>A+</strong> ("A plus"). Here is how the letter grades, marks and grade points line up:</p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Marks (%)</th><th>Letter Grade</th><th>Grade Point</th><th>Meaning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>80&ndash;100</td><td>A+</td><td>5.00</td><td>Outstanding</td></tr>
+        <tr><td>70&ndash;79</td><td>A</td><td>4.00</td><td>Excellent</td></tr>
+        <tr><td>60&ndash;69</td><td>A&minus;</td><td>3.50</td><td>Very good</td></tr>
+        <tr><td>50&ndash;59</td><td>B</td><td>3.00</td><td>Good</td></tr>
+        <tr><td>40&ndash;49</td><td>C</td><td>2.00</td><td>Average</td></tr>
+        <tr><td>33&ndash;39</td><td>D</td><td>1.00</td><td>Pass</td></tr>
+        <tr><td>0&ndash;32</td><td>F</td><td>0.00</td><td>Fail</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Your final GPA is the average of the grade points across your subjects, with a small twist: the <strong>4th subject</strong> (optional subject) is counted in a special way. If you score above grade C in your 4th subject, the points above 2.00 are <em>added</em> to your total &mdash; which is how many students push their GPA up to a full 5.00. To pass overall, you must earn at least a grade D (grade point 1.00) in every compulsory and elective subject; an F in even one subject means the overall result is recorded as failed for that subject.</p>
+
+  <!-- 8. STATS -->
+  <h2 id="stats"><span class="num">08</span>SSC Pass Rate &amp; Past-Year Trends</h2>
+  <p>Every year the first question after the result drops is: <em>how did the country do?</em> The national pass rate and GPA-5 count set the tone for the whole admission season. Looking at recent years helps put the 2026 result in context once it arrives.</p>
+
+  <div class="chart">
+    <div class="ct">National SSC pass rate, recent years (%)</div>
+    <div class="bar"><span class="yr">2022</span><span class="track"><span class="fill" style="width:87.44%"></span></span><span class="val">87.44</span></div>
+    <div class="bar"><span class="yr">2023</span><span class="track"><span class="fill" style="width:80.39%"></span></span><span class="val">80.39</span></div>
+    <div class="bar"><span class="yr">2024</span><span class="track"><span class="fill" style="width:83.04%"></span></span><span class="val">83.04</span></div>
+    <div class="bar"><span class="yr">2025</span><span class="track"><span class="fill low" style="width:68.45%"></span></span><span class="val">68.45</span></div>
+    <div class="cap">The 2025 pass rate of <strong>68.45%</strong> was the lowest in about 16 years &mdash; down 14.59 points from 2024. The 2026 figure will be published on result day and added here.</div>
+  </div>
+
+  <p>The <strong>2025</strong> results were a genuine shock: a combined pass rate of <strong>68.45%</strong> across all boards, with <strong>139,032</strong> students earning GPA-5 &mdash; down from 182,129 the year before. Girls outperformed boys in both pass rate (71.03% vs 65.88%) and GPA-5 count. Below is how the individual boards compared in 2025, which gives you a realistic sense of the range before the 2026 numbers land.</p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Board</th><th>2025 Pass Rate</th><th>vs 2024</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Rajshahi</td><td>77.63%</td><td><span class="down">&darr;</span> from 89.25%</td></tr>
+        <tr><td>Jashore</td><td>73.69%</td><td><span class="down">&darr;</span> from 92.32%</td></tr>
+        <tr><td>Technical</td><td>73.63%</td><td><span class="down">&darr;</span></td></tr>
+        <tr><td>Chattogram</td><td>72.07%</td><td><span class="down">&darr;</span> from 80.82%</td></tr>
+        <tr><td>Sylhet</td><td>68.57%</td><td><span class="down">&darr;</span> from 83.88%</td></tr>
+        <tr><td>Madrasah (Dakhil)</td><td>68.09%</td><td><span class="down">&darr;</span> from 79.66%</td></tr>
+        <tr><td>Dhaka</td><td>67.51%</td><td><span class="down">&darr;</span> from 89.32%</td></tr>
+        <tr><td>Dinajpur</td><td>67.03%</td><td><span class="down">&darr;</span> from 78.40%</td></tr>
+        <tr><td>Cumilla</td><td>63.60%</td><td><span class="down">&darr;</span> from 79.23%</td></tr>
+        <tr><td>Mymensingh</td><td>58.22%</td><td><span class="down">&darr;</span> from 84.97%</td></tr>
+        <tr><td>Barishal</td><td>56.38%</td><td><span class="down">&darr;</span> from 89.13%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Why does this matter to you? Because a lower national pass rate usually means <strong>tougher marking</strong>, and it reshapes college admission competition. If 2026 follows a similar pattern, a solid GPA carries even more weight than in a high-pass-rate year. If it bounces back, the competition for top colleges tightens. Either way, understanding the trend helps you set realistic expectations before you open your result.</p>
+
+  <!-- 9. BOARDS -->
+  <h2 id="boards"><span class="num">09</span>The 11 Education Boards Explained</h2>
+  <p>Bangladesh does not have one national result &mdash; it has eleven boards publishing together on the same day. Nine are <strong>general education boards</strong> defined by region, and two are specialised: the <strong>Madrasah Education Board</strong>, which conducts the Dakhil exam (the madrasah equivalent of SSC), and the <strong>Bangladesh Technical Education Board</strong>, which runs SSC Vocational. Knowing which board you belong to matters, because your board code, your notices and sometimes your admission timing all follow from it.</p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Board</th><th>Type</th><th>Region served</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dhaka</td><td>General</td><td>Dhaka division &amp; surrounding districts</td></tr>
+        <tr><td>Rajshahi</td><td>General</td><td>Rajshahi division</td></tr>
+        <tr><td>Chattogram</td><td>General</td><td>Chattogram division</td></tr>
+        <tr><td>Cumilla</td><td>General</td><td>Cumilla &amp; nearby districts</td></tr>
+        <tr><td>Jashore</td><td>General</td><td>Khulna division region</td></tr>
+        <tr><td>Sylhet</td><td>General</td><td>Sylhet division</td></tr>
+        <tr><td>Barishal</td><td>General</td><td>Barishal division</td></tr>
+        <tr><td>Dinajpur</td><td>General</td><td>Rangpur division region</td></tr>
+        <tr><td>Mymensingh</td><td>General</td><td>Mymensingh division</td></tr>
+        <tr><td>Madrasah</td><td>Specialised</td><td>Dakhil, nationwide</td></tr>
+        <tr><td>Technical</td><td>Specialised</td><td>SSC Vocational, nationwide</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>All eleven release results at the same moment, but they can differ noticeably in pass rate, as the 2025 figures in section 8 showed &mdash; from Rajshahi near the top to Barishal at the bottom that year. Your board is simply the one printed on your admit card, and it is the board whose three-letter code you use for SMS and whose official notices you should follow for re-scrutiny and admission.</p>
+
+  <!-- 10. RE-SCRUTINY -->
+  <h2 id="rescrutiny"><span class="num">10</span>SSC Re-scrutiny 2026 (Board Challenge)</h2>
+  <p>If your result in a subject feels wrong &mdash; a grade lower than you were sure of &mdash; you can apply for <strong>re-scrutiny</strong>, often called a <strong>board challenge</strong>. It is important to understand what this actually is: the board does <em>not</em> re-mark your paper from scratch. Instead, it re-checks the mechanics &mdash; whether every answer was marked, whether the marks were added correctly, and whether the total was carried over properly. In practice, addition and omission errors are the most common reasons a grade changes.</p>
+
+  <h3>How to apply</h3>
+  <ol class="steps">
+    <li><strong>Wait for the application window</strong> It opens the day after results and usually stays open for about a week. The exact dates come in the official notice.</li>
+    <li><strong>Send an SMS from Teletalk</strong> Re-scrutiny applications are made by SMS in the format announced by the board (starting with <span class="sms-code">RSC</span>), using a Teletalk SIM.</li>
+    <li><strong>Pay the fee per subject</strong> The fee is typically around <strong>125&ndash;150 Taka per subject/paper</strong>. Choose only the subjects you genuinely doubt &mdash; the cost adds up.</li>
+    <li><strong>Wait for the review result</strong> The re-scrutiny result is usually published about a month after the application deadline, on the same official portals.</li>
+  </ol>
+
+  <div class="callout gold">
+    <p><strong>Be realistic.</strong> Most applications do not change a grade, because the marking itself is not re-done. Apply where you have a real reason &mdash; a subject you were confident about that came back surprisingly low &mdash; rather than challenging every paper out of hope.</p>
+  </div>
+
+  <!-- 11. ADMISSION -->
+  <h2 id="admission"><span class="num">11</span>College (Class XI) Admission After SSC</h2>
+  <p>For most students, the SSC result exists to answer one practical question: <em>which college can I get into?</em> Class XI admission in Bangladesh runs through a <strong>central online system</strong>, and it opens not long after results are published &mdash; which is exactly why a delayed result compresses the gap and makes it important to be ready in advance.</p>
+  <p>Admission is competitive and largely <strong>merit-based on your SSC GPA</strong> and, for many colleges, your subject grades within your group. Higher-demand colleges fill their merit lists with the top GPAs first, so your realistic target depends on both your own result and the national picture that year. This is where the pass-rate trend matters: in a low-pass-rate year, a strong GPA stands out more; in a high one, the competition at the top is fierce.</p>
+
+  <h3>How to prepare before the circular</h3>
+  <ul>
+    <li><strong>Keep your grade sheet saved</strong> as a PDF and know your exact GPA and subject grades.</li>
+    <li><strong>Build a shortlist of colleges</strong> in three tiers &mdash; a few ambitious, several realistic, and a couple of safe options you would still be happy with.</li>
+    <li><strong>Check each college's group and GPA requirements</strong> so you do not waste choices on colleges you cannot qualify for.</li>
+    <li><strong>Have your details and a photo ready</strong> for the online application the moment the admission circular is published.</li>
+  </ul>
+
+  <div class="callout gold">
+    <p><strong>Don't lose the result-day momentum.</strong> Every year some students celebrate (or sulk) for a week and then scramble when admission opens. Treat result day and admission as one connected process: the day you have your GPA, start planning your college list.</p>
+  </div>
+
+  <!-- 12. AFTER -->
+  <h2 id="after"><span class="num">12</span>What to Do After the SSC Result</h2>
+  <p>The result is not the finish line &mdash; it is the starting gun for the next stage. Here is what comes after, whichever way your result goes.</p>
+
+  <h3>If you passed</h3>
+  <p>Congratulations &mdash; now move quickly, because <strong>class XI (college) admission</strong> opens soon after results through the central online admission system. Your SSC GPA and subject grades decide which colleges you can realistically target. Make a shortlist that mixes ambitious choices with safe ones, keep your grade sheet and a passport photo ready, and watch the official admission circular for dates. A great result means little if you miss the admission window.</p>
+
+  <h3>If the result was not what you hoped</h3>
+  <p>First, breathe. A single exam does not define your intelligence or your future, and plenty of people who stumbled at SSC went on to do very well. Your practical options include applying for <strong>re-scrutiny</strong> in subjects you doubt (section 9), and if you did not pass, sitting the <strong>next available exam</strong> to improve. Talk to your teachers about where things went wrong and how to prepare differently. The result is information, not a verdict.</p>
+
+  <blockquote>
+    Whatever the number on the screen, it is one measurement on one day. It opens some doors and closes others &mdash; it does not decide the whole building.
+  </blockquote>
+
+  <!-- 11. TIPS -->
+  <h2 id="tips"><span class="num">13</span>Result-Day Tips (So You Don't Panic)</h2>
+  <ul>
+    <li><strong>Keep both numbers ready.</strong> Roll <em>and</em> registration, written down or photographed, before 2:00 PM.</li>
+    <li><strong>Draft your SMS in advance.</strong> Type <span class="sms-code">SSC DHA 123456 2026</span> (your details) and keep it ready to send at 2:00 PM sharp.</li>
+    <li><strong>Expect the website to be slow.</strong> It is not broken &mdash; it is busy. Refresh calmly or switch to SMS.</li>
+    <li><strong>Only use official portals.</strong> Never enter your details on unknown &ldquo;fast result&rdquo; sites that ask for personal information.</li>
+    <li><strong>Save a copy immediately.</strong> Screenshot or print your marksheet the moment it loads &mdash; you will need it for admission.</li>
+    <li><strong>Don't compare obsessively.</strong> Your friend's GPA is not your scoreboard. Focus on your own next step.</li>
+  </ul>
+
+  <!-- 12. FAQ -->
+  <h2 id="faq"><span class="num">14</span>Frequently Asked Questions</h2>
+
+  <details>
+    <summary>When will the SSC Result 2026 be published?</summary>
+    <div class="a"><p>The SSC Result 2026 was originally set for 20 July 2026 but has been postponed. The education boards expect to publish it in the last week of July 2026, around 28&ndash;29 July, with the Ministry of Education confirming the final date. Results are traditionally released at 2:00 PM.</p></div>
+  </details>
+
+  <details>
+    <summary>How can I check my SSC result with the full marksheet?</summary>
+    <div class="a"><p>Visit an official portal such as eboardresults.com or educationboardresults.gov.bd, select SSC, choose 2026 and your board, then enter both your roll number and registration number. Entering both is what displays the subject-wise marksheet rather than just the basic result.</p></div>
+  </details>
+
+  <details>
+    <summary>Can I check my result with only the roll number?</summary>
+    <div class="a"><p>Yes. You can see your basic result and GPA with just the roll number, and by SMS you only need the roll. However, the full marksheet with subject-wise grades requires both the roll number and the registration number.</p></div>
+  </details>
+
+  <details>
+    <summary>What is the SMS format for the SSC Result 2026?</summary>
+    <div class="a"><p>Send <strong>SSC &lt;BOARD&gt; &lt;ROLL&gt; 2026</strong> to <strong>16222</strong>. For example, a Dhaka Board student types <span class="sms-code">SSC DHA 123456 2026</span>. Dakhil students start with DAKHIL and use MAD; vocational students use TEC. See the board-code table above for every board.</p></div>
+  </details>
+
+  <details>
+    <summary>How many education boards publish the SSC result?</summary>
+    <div class="a"><p>Eleven boards publish simultaneously: nine general education boards (Dhaka, Rajshahi, Chattogram, Cumilla, Jashore, Sylhet, Barishal, Dinajpur, Mymensingh), the Madrasah Education Board (Dakhil), and the Technical Education Board (Vocational).</p></div>
+  </details>
+
+  <details>
+    <summary>The result website is not loading. What should I do?</summary>
+    <div class="a"><p>On result day almost two million students visit at once, so the official servers slow down. Wait a few minutes and refresh with Ctrl + R, or use the SMS method to 16222, which does not depend on the website. Avoid entering your details on unofficial mirror sites.</p></div>
+  </details>
+
+  <details>
+    <summary>How do I apply for re-scrutiny, and does it help?</summary>
+    <div class="a"><p>After results, apply by SMS from a Teletalk SIM (format beginning with RSC) within the application window, paying roughly 125&ndash;150 Taka per subject. Re-scrutiny re-checks whether marks were added and recorded correctly rather than re-marking the paper, so apply only for subjects where you have a genuine reason to doubt the result.</p></div>
+  </details>
+
+  <details>
+    <summary>Is this an official education board website?</summary>
+    <div class="a"><p>No. This is an independent information website that explains the result process. Official results are published only by the education boards, through educationboardresults.gov.bd and eboardresults.com. If anything here ever differs from an official notice, the board's notice is the correct one.</p></div>
+  </details>
+
+  <p class="end">This guide is updated as new official information about the SSC Result 2026 is announced. Last reviewed 25 July 2026. Always confirm dates, fees and procedures against an official education board notice before acting on them.</p>
+
+</article>
 </section>
 
 <footer>
