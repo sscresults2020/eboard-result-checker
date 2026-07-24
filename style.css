@@ -81,6 +81,17 @@
   }
   nav a:hover{background:rgba(255,255,255,.14)}
   nav a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.site-brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    text-decoration:none;
+    color:inherit;
+}
+
+.site-brand:hover{
+    opacity:.9;
+}
 
   /* ── hero ────────────────────────────────────── */
   .hero{background:var(--green);color:#fff;padding:2.1rem 1rem 3.6rem;text-align:center}
