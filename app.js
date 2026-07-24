@@ -996,29 +996,37 @@ if (refreshCaptchaBtn) {
 
 // Reset Button
 
-if (resetBtn) {
+// Reset Button
 
+if (resetBtn) {
 
     resetBtn.addEventListener(
         "click",
-        function() {
+        function () {
 
+            // Reset all form fields to default values
+            resultForm.reset();
 
+            // Clear captcha input
+            captchaInput.value = "";
+
+            // Clear current captcha session
+            sessionToken = "";
+
+            // Hide result section
             clearResult();
 
-
+            // Hide error message
             hideError();
 
+            // Load a fresh captcha
+            loadCaptcha();
 
-            setTimeout(
-                loadCaptcha,
-                100
-            );
-
+            // Put cursor in Roll Number field
+            roll.focus();
 
         }
     );
-
 
 }
 
