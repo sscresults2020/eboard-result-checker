@@ -81,7 +81,9 @@
 
 <header>
   <div class="head">
-    <div class="crest"><img src="assets/eboard-result-logo.webp"></div>
+    <div class="crest"><img src="assets/eboard-result-logo.webp" alt="Exam Results BD Logo"
+    width="64"
+    height="64"></div>
     <div class="brand">SSC Result 2026
       <small>Independent result information portal &mdash; all education boards, Bangladesh</small>
     </div>
@@ -128,7 +130,7 @@
 
         <div>
 
-          <label>
+          <label for="exam">
             Examination
           </label>
 
@@ -159,7 +161,7 @@
 
         <div>
 
-          <label>
+          <label for="year">
             Passing Year
           </label>
 
@@ -258,7 +260,7 @@
         <div>
 
 
-          <label>
+          <label for="board">
             Education Board
           </label>
 
@@ -333,15 +335,16 @@
         <div>
 
 
-          <label>
+          <label for="roll">
             Roll Number
           </label>
 
 
           <input
+          inputmode="numeric"
           type="tel"
           id="roll"
-          placeholder="Enter Roll Number">
+          placeholder="Enter Roll Number" required>
 
 
         </div>
@@ -358,12 +361,13 @@
       <div>
 
 
-        <label>
+        <label  for="registration">
           Registration Number
         </label>
 
 
         <input
+        inputmode="numeric"
         type="tel"
         id="registration"
         placeholder="Enter Registration Number">
@@ -384,10 +388,18 @@
 
     <div class="captcha-box">
 
-        <img
-            id="captchaImage"
-            class="captcha-image"
-            alt="Security Code">
+             <div id="captchaLoader" class="captcha-loader">
+        <div class="captcha-spinner"></div>
+        <span>Loading CAPTCHA...</span>
+    </div>
+
+    <img
+        id="captchaImage"
+        class="captcha-image"
+        alt="Security Code"
+        loading="eager"
+        decoding="async">
+
 
     </div>
 
@@ -451,8 +463,9 @@
 
     <input
         type="tel"
+        inputmode="numeric"
         id="captcha"
-        placeholder="Enter Security Code">
+        placeholder="Enter Security Code" required  autocomplete="off">
 
 </div>
 
