@@ -63,6 +63,9 @@ const captchaInput =
 const captchaImage =
     document.getElementById("captchaImage");
 
+    const captchaLoader =
+    document.getElementById("captchaLoader");
+
 const refreshCaptchaBtn =
     document.getElementById("refreshCaptcha");
 
@@ -203,54 +206,108 @@ async function apiRequest(url, formData = new FormData()) {
 // CAPTCHA FUNCTIONS
 // ========================================
 
+// When CAPTCHA image loads successfully
+captchaImage.onload = function () {
 
+    if (captchaLoader) {
+        captchaLoader.style.display = "none";
+    }
+
+    captchaImage.style.opacity = "1";
+
+    if (refreshCaptchaBtn) {
+        refreshCaptchaBtn.disabled = false;
+    }
+
+};
+
+// If CAPTCHA image fails to load
+captchaImage.onerror = function () {
+
+    if (captchaLoader) {
+        captchaLoader.style.display = "none";
+    }
+
+    captchaImage.style.opacity = "1";
+
+    if (refreshCaptchaBtn) {
+        refreshCaptchaBtn.disabled = false;
+    }
+
+    showError(
+        "Failed to load security code. Please refresh."
+    );
+
+};
+
+// Load a new CAPTCHA
 async function loadCaptcha() {
 
+    // Show loader
+    if (captchaLoader) {
+        captchaLoader.style.display = "flex";
+    }
 
-    const response =
-        await apiRequest(
-            API.CAPTCHA
-        );
+    // Hide current image while loading
+    captchaImage.style.opacity = "0";
 
+    // Prevent multiple refresh clicks
+    if (refreshCaptchaBtn) {
+        refreshCaptchaBtn.disabled = true;
+    }
 
+    try {
 
-    if (!response.ok) {
+        const response =
+            await apiRequest(
+                API.CAPTCHA
+            );
 
+        if (!response.ok) {
 
-        showError(
-            response.message ||
-            "Captcha loading failed."
-        );
+            throw new Error(
+                response.message ||
+                "Captcha loading failed."
+            );
 
+        }
 
-        return;
+        // Save session
+        sessionToken =
+            response.session;
 
+        // Clear previous input
+        captchaInput.value = "";
+
+        // Hide any previous error
+        hideError();
+
+        // Image will become visible in onload()
+        captchaImage.src =
+            response.image;
 
     }
 
+    catch (error) {
 
+        if (captchaLoader) {
+            captchaLoader.style.display = "none";
+        }
 
-    sessionToken =
-        response.session;
+        captchaImage.style.opacity = "1";
 
+        if (refreshCaptchaBtn) {
+            refreshCaptchaBtn.disabled = false;
+        }
 
+        showError(
+            error.message ||
+            "Failed to load security code."
+        );
 
-    captchaImage.src =
-        response.image;
-
-
-
-    captchaInput.value =
-        "";
-
-
-
-    hideError();
-
+    }
 
 }
-
-
 
 // ========================================
 // ERROR HANDLING
