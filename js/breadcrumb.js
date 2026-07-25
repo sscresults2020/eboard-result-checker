@@ -1,32 +1,48 @@
 (() => {
+  const siteUrl = "https://examresultsbd.com";
+
   const canonical =
     document.querySelector('link[rel="canonical"]')?.href ||
     window.location.href;
 
   const path = new URL(canonical).pathname;
 
-  // Don't show breadcrumb on homepage or 404 page
+  // Skip homepage and 404
   if (path === "/" || path === "/index.html" || path.includes("404")) {
     return;
   }
 
-  // Use custom breadcrumb name if available, otherwise use page title
+  // Use custom breadcrumb label or page title
   const pageTitle =
     document.body.dataset.breadcrumb ||
     document.title.split("|")[0].trim();
 
-  // Create visual breadcrumb
+  // -------------------------
+  // Visual Breadcrumb
+  // -------------------------
+
   const crumb = document.querySelector(".crumb");
 
   if (crumb) {
     crumb.innerHTML = `
-      <a href="https://examresultsbd.com/">Home</a>
+      <a href="${siteUrl}/">Home</a>
       <span aria-hidden="true"> › </span>
-      <span>${pageTitle}</span>
+      <span aria-current="page">${pageTitle}</span>
     `;
   }
 
-  // Create BreadcrumbList schema
+  // -------------------------
+  // Prevent duplicate schema
+  // -------------------------
+
+  if (document.querySelector('script[data-breadcrumb-schema]')) {
+    return;
+  }
+
+  // -------------------------
+  // Breadcrumb Schema
+  // -------------------------
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -35,7 +51,7 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://examresultsbd.com/"
+        "item": `${siteUrl}/`
       },
       {
         "@type": "ListItem",
@@ -48,6 +64,7 @@
 
   const script = document.createElement("script");
   script.type = "application/ld+json";
+  script.dataset.breadcrumbSchema = "true";
   script.textContent = JSON.stringify(schema);
 
   document.head.appendChild(script);
