@@ -537,3 +537,17 @@ font-weight:500;
     opacity:.9;
 
 }
+
+input.input-error{
+
+    border:2px solid #dc2626 !important;
+
+    box-shadow:0 0 0 3px rgba(220,38,38,.12) !important;
+
+}
+
+input.input-error:focus{
+
+    border-color:#dc2626 !important;
+
+}
