@@ -85,7 +85,7 @@
 
 
   /* ── hero ────────────────────────────────────── */
-  .hero{background:#033a2c;color:#fff;padding:2.1rem 1rem 3.6rem;text-align:center}
+  .hero{background:var(--green);color:#fff;padding:2.1rem 1rem 3.6rem;text-align:center}
   .eyebrow{
     display:inline-block;font-family:var(--mono);font-size:.72rem;font-weight:600;
     letter-spacing:.14em;text-transform:uppercase;color:#ffd98a;
