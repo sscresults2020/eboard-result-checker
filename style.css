@@ -600,7 +600,7 @@ input.input-error:focus{
 .sms-figure img{
   display:block;
   width:100%;
-  max-width:520px;      /* keeps it from stretching too wide on desktop */
+  max-width:720px;      /* fuller width on desktop, still capped */
   height:auto;
   margin:0 auto;
   border-radius:12px;
