@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="How to check SSC Result 2026 by SMS: type SSC space board code space roll space 2026 and send to 16222">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05614a"/>
+      <stop offset="1" stop-color="#033a2c"/>
+    </linearGradient>
+    <linearGradient id="send" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c08a1e"/>
+      <stop offset="1" stop-color="#d9a534"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+    <style>
+      .head{font-family:"Archivo","Segoe UI",Arial,sans-serif;font-weight:800;}
+      .body{font-family:"IBM Plex Sans","Segoe UI",Arial,sans-serif;}
+      .mono{font-family:"IBM Plex Mono","Courier New",monospace;font-weight:600;}
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="800" height="420" rx="20" fill="url(#bg)"/>
+  <!-- gold top rule -->
+  <rect x="0" y="0" width="800" height="6" fill="#c08a1e"/>
+
+  <!-- title -->
+  <text x="400" y="58" text-anchor="middle" class="head" font-size="27" fill="#ffffff">Check SSC Result 2026 by SMS</text>
+  <text x="400" y="86" text-anchor="middle" class="body" font-size="15" fill="#bcd6cd">Works on any phone, no internet needed</text>
+
+  <!-- message bubble -->
+  <g filter="url(#shadow)">
+    <rect x="110" y="118" width="580" height="120" rx="16" fill="#ffffff"/>
+    <!-- bubble tail -->
+    <path d="M150 238 L150 262 L178 238 Z" fill="#ffffff"/>
+  </g>
+  <text x="140" y="150" class="body" font-size="13" fill="#5f6d67" letter-spacing="1.5">TYPE THIS MESSAGE</text>
+
+  <!-- formatted SMS with coloured tokens -->
+  <text x="140" y="196" class="mono" font-size="30">
+    <tspan fill="#05614a">SSC</tspan><tspan fill="#12211c" dx="6"> </tspan><tspan fill="#e0243a" dx="2">DHA</tspan><tspan fill="#12211c" dx="10">123456</tspan><tspan fill="#c08a1e" dx="10">2026</tspan>
+  </text>
+
+  <!-- legend under tokens -->
+  <text x="141" y="222" class="body" font-size="12.5" fill="#5f6d67">
+    <tspan fill="#05614a" font-weight="700">exam</tspan>  ·
+    <tspan fill="#e0243a" font-weight="700">board code</tspan>  ·
+    <tspan fill="#12211c" font-weight="700">roll number</tspan>  ·
+    <tspan fill="#c08a1e" font-weight="700">year</tspan>
+  </text>
+
+  <!-- send to number -->
+  <text x="400" y="300" text-anchor="middle" class="body" font-size="16" fill="#d9e7e1">then send to</text>
+  <g filter="url(#shadow)">
+    <rect x="300" y="316" width="200" height="60" rx="12" fill="url(#send)"/>
+  </g>
+  <text x="400" y="356" text-anchor="middle" class="head" font-size="30" fill="#ffffff" letter-spacing="2">16222</text>
+
+  <!-- example note -->
+  <text x="400" y="404" text-anchor="middle" class="body" font-size="12.5" fill="#9fbdb2">Example shown for Dhaka Board (DHA). Use your own board code and roll number.</text>
+</svg>
