@@ -485,53 +485,60 @@ function getFormData() {
 
 function validateForm(data) {
 
+    hideError();
+
+    [
+        roll,
+        registration,
+        captchaInput
+    ].forEach(input => {
+
+        input.classList.remove("input-error");
+
+    });
 
     if (!data.roll) {
 
+        roll.classList.add("input-error");
+        roll.focus();
 
-        throw new Error(
-            "Please enter Roll Number."
-        );
+        showError("Please enter your Roll Number.");
 
+        return false;
 
     }
-
-
 
     if (!data.reg) {
 
+        registration.classList.add("input-error");
+        registration.focus();
 
-        throw new Error(
-            "Please enter Registration Number."
-        );
+        showError("Please enter your Registration Number.");
 
+        return false;
 
     }
-
-
 
     if (!data.captcha) {
 
+        captchaInput.classList.add("input-error");
+        captchaInput.focus();
 
-        throw new Error(
-            "Please enter Captcha."
-        );
+        showError("Please enter the Security Code.");
 
+        return false;
 
     }
-
-
 
     if (!sessionToken) {
 
+        showError("Security code expired. Please refresh it.");
 
-        throw new Error(
-            "Captcha session expired. Refresh captcha."
-        );
-
+        return false;
 
     }
 
+    return true;
 
 }
 
@@ -639,7 +646,9 @@ async function searchResult() {
     try {
 
 
-        validateForm(data);
+       if (!validateForm(data)) {
+    return null;
+}
 
 
 
@@ -995,12 +1004,13 @@ if(resultForm) {
             try {
 
 
-                const result =
-                    await searchResult();
+                const result = await searchResult();
 
+if (result === null) {
+    return;
+}
 
-
-                displayResult(result);
+displayResult(result);
 
 
 
@@ -1114,6 +1124,27 @@ if (printBtn) {
 // INITIALIZE APP
 // ========================================
 
+[
+    roll,
+    registration,
+    captchaInput
+].forEach(input => {
+
+    input.addEventListener("input", () => {
+
+        input.classList.remove("input-error");
+
+        if (
+            roll.value.trim() &&
+            registration.value.trim() &&
+            captchaInput.value.trim()
+        ) {
+            hideError();
+        }
+
+    });
+
+});
 
 clearResult();
 
