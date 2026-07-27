@@ -4,7 +4,7 @@
 const API = {
 
     CAPTCHA:
-        "https://ssc.bdresult.workers.dev/captcha",
+        "https://result.bangladeshgov.org/captcha",
 
     RESULT:
         "https://ssc.bdresult.workers.dev/result"
