@@ -1,7 +1,7 @@
 /* ══════════════════════════════════════════════════════════════
    ARTICLE.CSS  —  shared article styles for Exam Results BD
    Loaded AFTER style.css (reuses its :root variables).
-   NO <style> tags — this is a linked stylesheet at /css/article.css
+   NO  tags — this is a linked stylesheet at /css/article.css
    Two independent blocks:
      BLOCK 1  .guide   → homepage Section 2 guide
      BLOCK 2  .doc     → board pages (Dhaka, Rajshahi, ...)
