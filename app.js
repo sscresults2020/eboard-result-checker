@@ -145,61 +145,59 @@ const subjectTableBody =
 
 async function apiRequest(url, formData = new FormData()) {
 
-
     try {
 
+        const response = await fetch(url, {
 
-        const response =
-            await fetch(url, {
+            method: "POST",
 
-                method: "POST",
+            body: formData,
 
-                body: formData,
+            cache: "no-store"
 
-                cache: "no-store"
+        });
 
-            });
+        let json;
 
+        try {
 
-
-        if (!response.ok) {
-
-            throw new Error(
-                `HTTP ${response.status}`
-            );
+            json = await response.json();
 
         }
 
+        catch {
 
+            json = {
 
-        return await response.json();
+                ok: false,
 
+                error: "invalid_response",
 
+                message: `Server returned HTTP ${response.status}.`
+
+            };
+
+        }
+
+        return json;
 
     }
 
-    catch(error) {
+    catch (error) {
 
-
-        console.error(
-            "API Error:",
-            error
-        );
-
+        console.error("API Error:", error);
 
         return {
 
-            ok:false,
+            ok: false,
 
-            message:
-                error.message ||
-                "Network Error"
+            error: "network_error",
+
+            message: "Unable to connect to the result server. Please check your internet connection and try again."
 
         };
 
-
     }
-
 
 }
 // ========================================
