@@ -263,12 +263,22 @@ async function loadCaptcha() {
 
         if (!response.ok) {
 
-            throw new Error(
-                response.message ||
-                "Captcha loading failed."
-            );
+    if (response.error === "captcha_unavailable") {
 
-        }
+        showError(
+            "⚠️ The official Education Board servers are temporarily busy. Please wait a few minutes and refresh the security code."
+        );
+
+        return;
+
+    }
+
+    throw new Error(
+        response.message ||
+        "Unable to load the security code. Please try again."
+    );
+
+}
 
         // Save session
         sessionToken =
