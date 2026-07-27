@@ -266,7 +266,7 @@ async function loadCaptcha() {
     if (response.error === "captcha_unavailable") {
 
         showError(
-            "⚠️ The official Education Board servers are temporarily busy. Please wait a few minutes and refresh the security code."
+            "The official Education Board servers are temporarily busy. Please wait a few minutes and refresh the security code."
         );
 
         return;
