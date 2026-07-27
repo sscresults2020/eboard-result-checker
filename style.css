@@ -1,5 +1,4 @@
-
-  :root{
+:root{
     /* palette — board green, flag red, official-notice gold, document paper */
     --green:#05614a;
     --green-deep:#033a2c;
@@ -588,3 +587,19 @@ input.input-error:focus{
     border-color:#dc2626 !important;
 
 }
+
+
+/* ══════════════════════════════════════════════
+   MOBILE HEADER REFINEMENT  (<=600px)
+   CSS-only, uses existing selectors. No markup change.
+   Added: 27 Jul 2026
+   ══════════════════════════════════════════════ */
+@media(max-width:600px){
+  .head{gap:.6rem;padding:.75rem .9rem}
+  .brand{font-size:1.05rem;line-height:1.15}
+  .brand small{font-size:.68rem}
+  nav{width:100%;margin-left:0;margin-top:.5rem;gap:.15rem;
+      border-top:1px solid rgba(255,255,255,.15);padding-top:.55rem}
+  nav > a{padding:.4rem .55rem}
+}
+/* ── end mobile header refinement ─────────────── */
