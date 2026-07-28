@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,6 +148,36 @@ footer{background:var(--green-deep);color:#c3d8d0;padding:2rem 1rem 1.5rem;font-
 .copy{margin-top:.9rem;color:#7fa196;font-size:.76rem}
 
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* nav dropdown (Education Boards) */
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{color:#fff;background:none;border:none;font-family:var(--body);font-size:.86rem;font-weight:500;padding:.42rem .7rem;border-radius:5px;cursor:pointer;display:flex;align-items:center;gap:.3rem}
+.nav-dropdown-toggle:hover{background:rgba(255,255,255,.14)}
+.nav-dropdown-toggle .caret{transition:transform .2s}
+.nav-dropdown-toggle[aria-expanded="true"] .caret{transform:rotate(180deg)}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;right:0;margin-top:.45rem;background:#fff;border:1px solid var(--line);border-radius:9px;box-shadow:0 10px 28px rgba(3,45,33,.18);min-width:220px;padding:.4rem;z-index:60}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-menu a{display:block;color:var(--ink);font-size:.88rem;font-weight:500;padding:.55rem .7rem;border-radius:5px}
+.nav-dropdown-menu a:hover{background:var(--green-tint);color:var(--green-deep)}
+.brand-link{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:inherit}
+.brand-link .brand{display:flex;flex-direction:column;justify-content:center}
+nav.main a.active,.nav-dropdown-toggle.active{background:rgba(255,255,255,.16);color:#fff;box-shadow:inset 0 -2px 0 var(--gold)}
+@media(max-width:640px){
+  .nav-dropdown{width:100%}
+  .nav-dropdown-menu{position:static;box-shadow:none;border:none;min-width:0;width:100%;background:rgba(255,255,255,.08);margin-top:.3rem}
+  .nav-dropdown-menu a{color:#fff}
+  .nav-dropdown-menu a:hover{background:rgba(255,255,255,.15);color:#fff}
+}
+@media(max-width:600px){
+  .head{gap:.55rem;padding:.7rem .85rem;flex-wrap:wrap}
+  .brand-link{flex:1 1 auto;min-width:0}
+  .crest{width:42px;height:42px;flex:0 0 42px}
+  .brand{font-size:1rem;line-height:1.12}
+  .brand small{font-size:.66rem}
+  nav.main{width:100%;margin-left:0;margin-top:.5rem;gap:.12rem;justify-content:flex-start;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.15);padding-top:.5rem}
+  nav.main a,.nav-dropdown-toggle{padding:.4rem .6rem;font-size:.83rem}
+}
+
 </style>
 
   <script type="application/ld+json">
@@ -173,14 +202,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header>
   <div class="head">
-    <a class="crest" href="https://examresultsbd.com"><img src="https://examresultsbd.com/assets/eboard-result-logo.webp" alt="Exam Results BD Logo" width="64" height="64"></a>
-    <a class="brand" href="https://examresultsbd.com">SSC Result 2026
-      <small>Independent result information portal &mdash; all education boards, Bangladesh</small>
+    <a class="brand-link" href="/">
+      <span class="crest"><img src="/assets/logo.webp" alt="Exam Results BD Logo" width="64" height="64"></span>
+      <span class="brand">Exam Results BD<small>Independent result information portal, all education boards, Bangladesh</small></span>
     </a>
-    <nav class="main" aria-label="Main">
-      <a href="https://examresultsbd.com">Home</a>
-      <a href="https://examresultsbd.com/#check">Check Result</a>
-      <a href="https://examresultsbd.com/#guide">Guide</a>
+        <nav class="main" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/#check">Check Result</a>
+      <a href="/gpa-calculator">GPA Calculator</a>
+      <a href="/#guide">Guide</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Education Boards <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="/ssc-result-2026-dhaka-board" role="menuitem">Dhaka Board</a>
+          <a href="/ssc-result-2026-rajshahi-board" role="menuitem">Rajshahi Board</a>
+          <a href="/ssc-result-2026-chattogram-board" role="menuitem">Chattogram Board</a>
+          <a href="/ssc-result-2026-comilla-board" role="menuitem">Cumilla Board</a>
+          <a href="/ssc-result-2026-jashore-board" role="menuitem">Jashore Board</a>
+          <a href="/ssc-result-2026-sylhet-board" role="menuitem">Sylhet Board</a>
+          <a href="/ssc-result-2026-barishal-board" role="menuitem">Barishal Board</a>
+          <a href="/ssc-result-2026-dinajpur-board" role="menuitem">Dinajpur Board</a>
+          <a href="/ssc-result-2026-mymensingh-board" role="menuitem">Mymensingh Board</a>
+          <a href="/ssc-result-2026-madrasah-board" role="menuitem">Madrasah (Dakhil)</a>
+          <a href="/ssc-result-2026-technical-board" role="menuitem">Technical (Vocational)</a>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
@@ -188,7 +234,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="page-head">
   <span class="eyebrow">Get in touch</span>
   <h1>Contact Us</h1>
-  <p>Corrections, questions and business enquiries — and what we cannot help with.</p>
+  <p>Corrections, questions and business enquiries ,  and what we cannot help with.</p>
 </section>
 
 <nav class="crumb" aria-label="Breadcrumb"></nav>
@@ -197,7 +243,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <article class="doc">
     <p class="stamp">Last updated &middot; 25 July 2026</p>
 
-    <p class="lead">We read every message. Use the details below for corrections, questions about the site, or business enquiries &mdash; and please read the note about individual results before writing.</p>
+    <p class="lead">We read every message. Use the details below for corrections, questions about the site, or business enquiries, and please read the note about individual results before writing.</p>
 
     <div class="cards">
       <div class="card">
@@ -219,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h2>Before you write to us</h2>
     <div class="callout">
-      <strong>We cannot look up, change or explain an individual result.</strong> We are not an education board and we have no access to anyone's result records, marks or certificates. If your result looks wrong, or a subject is missing, contact your own institution or your education board directly &mdash; they are the only ones who can act on it. Please do not send us your roll number, registration number or any personal documents.
+      <strong>We cannot look up, change or explain an individual result.</strong> We are not an education board and we have no access to anyone's result records, marks or certificates. If your result looks wrong, or a subject is missing, contact your own institution or your education board directly, they are the only ones who can act on it. Please do not send us your roll number, registration number or any personal documents.
     </div>
 
     <h2>What to contact us about</h2>
@@ -233,7 +279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <tr><td><strong>Question about the site</strong></td><td>What you were trying to do and what happened instead.</td></tr>
           <tr><td><strong>Technical problem</strong></td><td>Your device, your browser, and a screenshot if possible.</td></tr>
           <tr><td><strong>Advertising or partnership</strong></td><td>Your organisation, what you are proposing, and a contact number.</td></tr>
-          <tr><td><strong>Privacy request</strong></td><td>Write with the subject line <code>Privacy request</code> &mdash; see our <a href="privacy-policy.html">Privacy Policy</a>.</td></tr>
+          <tr><td><strong>Privacy request</strong></td><td>Write with the subject line <code>Privacy request</code>, see our <a href="privacy-policy.html">Privacy Policy</a>.</td></tr>
         </tbody>
       </table>
     </div>
@@ -298,8 +344,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="portals">Results are published only by the official government portals: educationboardresults.gov.bd &nbsp;&middot;&nbsp; eboardresults.com</p>
 
     <nav class="policy" aria-label="Site policies">
-      <a href="https://examresultsbd.com/about.html">About us</a>
-      <a href="https://examresultsbd.com/contact.html" aria-current="page">Contact us</a>
+      <a href="/about">About us</a>
+      <a href="/contact" aria-current="page">Contact us</a>
       <a href="https://examresultsbd.com/privacy-policy.html">Privacy policy</a>
       <a href="https://examresultsbd.com/terms-and-conditions.html">Terms &amp; conditions</a>
       <a href="https://examresultsbd.com/disclaimer.html">Disclaimer</a>
@@ -308,10 +354,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="rule"></div>
     <p class="fine">This is an independent information website about the SSC Result 2026. We are not affiliated with, endorsed by, or connected to the Ministry of Education, the Inter-Education Board Coordination Committee, or any education board of Bangladesh. Always confirm your result on an official portal.</p>
-    <p class="copy">&copy; 2026 SSC Result 2026 &mdash; all rights reserved.</p>
+    <p class="copy">&copy; 2026 Exam Results BD. All rights reserved.</p>
   </div>
 </footer>
 
   <script src="/js/breadcrumb.js" defer></script>
+<script>
+/* Nav active-state + dropdown toggle */
+(function(){
+  var path = location.pathname.replace(/\/$/,'') || '/';
+  document.querySelectorAll('nav.main a[href]').forEach(function(a){
+    var href = a.getAttribute('href').replace(/\/$/,'');
+    if(href === path && !a.closest('.nav-dropdown-menu')) a.classList.add('active');
+  });
+  var tog=document.querySelector('.nav-dropdown-toggle');
+  if(tog){
+    tog.addEventListener('click',function(e){
+      e.stopPropagation();
+      var m=document.querySelector('.nav-dropdown-menu');
+      var open=m.classList.toggle('open');
+      tog.setAttribute('aria-expanded',open?'true':'false');
+    });
+    document.addEventListener('click',function(){
+      var m=document.querySelector('.nav-dropdown-menu');
+      if(m){m.classList.remove('open');tog.setAttribute('aria-expanded','false');}
+    });
+  }
+})();
+</script>
 </body>
 </html>
