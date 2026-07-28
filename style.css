@@ -142,7 +142,8 @@ nav a:focus-visible{outline:2px solid #fff;outline-offset:2px}
     background:var(--green-tint);border-bottom:1px solid var(--line);
     padding:.9rem 1.3rem;display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap;
   }
-  .checker-head h2{font-size:1rem;font-weight:800;color:var(--green-deep)}
+  .checker-head h2,
+  .checker-head .checker-title{font-size:1rem;font-weight:800;color:var(--green-deep);margin:0}
   .badge{
     font-family:var(--mono);font-size:.68rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;
     background:var(--gold-bg);color:var(--gold-ink);border:1px solid var(--gold-line);
@@ -625,16 +626,42 @@ input.input-error:focus{
 
 
 /* ══════════════════════════════════════════════
-   MOBILE HEADER REFINEMENT  (<=600px)
-   CSS-only, uses existing selectors. No markup change.
-   Added: 27 Jul 2026
+   HOMEPAGE POLISH  (updated 28 Jul 2026)
+   Header logo+brand side-by-side (desktop & mobile),
+   nav active state, checker titles, mobile nav.
+   Uses :root vars. No id/class removed. Safe with nav.js.
    ══════════════════════════════════════════════ */
-@media(max-width:600px){
-  .head{gap:.6rem;padding:.75rem .9rem}
-  .brand{font-size:1.05rem;line-height:1.15}
-  .brand small{font-size:.68rem}
-  nav{width:100%;margin-left:0;margin-top:.5rem;gap:.15rem;
-      border-top:1px solid rgba(255,255,255,.15);padding-top:.55rem}
-  nav > a{padding:.4rem .55rem}
+
+/* Point 1: logo + brand as one inline unit */
+.brand-link{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:inherit}
+.brand-link .brand{display:flex;flex-direction:column;justify-content:center}
+
+/* Point 3: nav active/selected state + clearer hover */
+nav a.active,
+.nav-dropdown-toggle.active{
+  background:rgba(255,255,255,.16);
+  color:#fff;
+  box-shadow:inset 0 -2px 0 var(--gold);
 }
-/* ── end mobile header refinement ─────────────── */
+nav a:hover,
+.nav-dropdown-toggle:hover{background:rgba(255,255,255,.14)}
+
+/* Point 4: checker titles (were h2, now styled paragraphs) */
+.checker-title{
+  font-family:var(--display);font-size:1.05rem;font-weight:800;
+  color:var(--green-deep);margin:0;letter-spacing:-.01em;
+}
+
+/* Points 1 + 2: mobile header keeps logo/brand side-by-side, nav organized */
+@media(max-width:600px){
+  .head{gap:.55rem;padding:.7rem .85rem;flex-wrap:wrap}
+  .brand-link{flex:1 1 auto;min-width:0}
+  .crest{width:42px;height:42px;flex:0 0 42px}
+  .brand{font-size:1rem;line-height:1.12}
+  .brand small{font-size:.66rem}
+  nav{width:100%;margin-left:0;margin-top:.5rem;gap:.12rem;
+      justify-content:flex-start;flex-wrap:wrap;
+      border-top:1px solid rgba(255,255,255,.15);padding-top:.5rem}
+  nav a,.nav-dropdown-toggle{padding:.4rem .6rem;font-size:.83rem}
+}
+/* ── end homepage polish ──────────────────────── */
