@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +11,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cookie Policy | Exam Results BD</title>
-<meta name="description" content="Cookie Policy for Exam Results BD — the cookies used for analytics and advertising, and step-by-step instructions to control or remove them.">
+<meta name="description" content="Cookie Policy for Exam Results BD ,  the cookies used for analytics and advertising, and step-by-step instructions to control or remove them.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://examresultsbd.com/cookie-policy">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Cookie Policy | Exam Results BD">
-<meta property="og:description" content="Cookie Policy for Exam Results BD — the cookies used for analytics and advertising, and step-by-step instructions to control or remove them.">
+<meta property="og:description" content="Cookie Policy for Exam Results BD ,  the cookies used for analytics and advertising, and step-by-step instructions to control or remove them.">
 <meta property="og:url" content="https://examresultsbd.com/cookie-policy">
 <meta property="og:site_name" content="Exam Results BD">
 <meta name="twitter:card" content="summary_large_image">
@@ -149,6 +148,36 @@ footer{background:var(--green-deep);color:#c3d8d0;padding:2rem 1rem 1.5rem;font-
 .copy{margin-top:.9rem;color:#7fa196;font-size:.76rem}
 
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* nav dropdown (Education Boards) */
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{color:#fff;background:none;border:none;font-family:var(--body);font-size:.86rem;font-weight:500;padding:.42rem .7rem;border-radius:5px;cursor:pointer;display:flex;align-items:center;gap:.3rem}
+.nav-dropdown-toggle:hover{background:rgba(255,255,255,.14)}
+.nav-dropdown-toggle .caret{transition:transform .2s}
+.nav-dropdown-toggle[aria-expanded="true"] .caret{transform:rotate(180deg)}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;right:0;margin-top:.45rem;background:#fff;border:1px solid var(--line);border-radius:9px;box-shadow:0 10px 28px rgba(3,45,33,.18);min-width:220px;padding:.4rem;z-index:60}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-menu a{display:block;color:var(--ink);font-size:.88rem;font-weight:500;padding:.55rem .7rem;border-radius:5px}
+.nav-dropdown-menu a:hover{background:var(--green-tint);color:var(--green-deep)}
+.brand-link{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:inherit}
+.brand-link .brand{display:flex;flex-direction:column;justify-content:center}
+nav.main a.active,.nav-dropdown-toggle.active{background:rgba(255,255,255,.16);color:#fff;box-shadow:inset 0 -2px 0 var(--gold)}
+@media(max-width:640px){
+  .nav-dropdown{width:100%}
+  .nav-dropdown-menu{position:static;box-shadow:none;border:none;min-width:0;width:100%;background:rgba(255,255,255,.08);margin-top:.3rem}
+  .nav-dropdown-menu a{color:#fff}
+  .nav-dropdown-menu a:hover{background:rgba(255,255,255,.15);color:#fff}
+}
+@media(max-width:600px){
+  .head{gap:.55rem;padding:.7rem .85rem;flex-wrap:wrap}
+  .brand-link{flex:1 1 auto;min-width:0}
+  .crest{width:42px;height:42px;flex:0 0 42px}
+  .brand{font-size:1rem;line-height:1.12}
+  .brand small{font-size:.66rem}
+  nav.main{width:100%;margin-left:0;margin-top:.5rem;gap:.12rem;justify-content:flex-start;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.15);padding-top:.5rem}
+  nav.main a,.nav-dropdown-toggle{padding:.4rem .6rem;font-size:.83rem}
+}
+
 </style>
 </head>
 <body data-breadcrumb="Cookie Policy">
@@ -159,14 +188,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header>
   <div class="head">
-    <a class="crest" href="https://examresultsbd.com/"><img src="https://examresultsbd.com/assets/eboard-result-logo.webp" alt="Exam Results BD Logo" width="64" height="64"></a>
-    <a class="brand" href="https://examresultsbd.com/">SSC Result 2026
-      <small>Independent result information portal &mdash; all education boards, Bangladesh</small>
+    <a class="brand-link" href="/">
+      <span class="crest"><img src="/assets/logo.webp" alt="Exam Results BD Logo" width="64" height="64"></span>
+      <span class="brand">Exam Results BD<small>Independent result information portal, all education boards, Bangladesh</small></span>
     </a>
-    <nav class="main" aria-label="Main">
-      <a href="https://examresultsbd.com/">Home</a>
-      <a href="https://examresultsbd.com/#check">Check Result</a>
-      <a href="https://examresultsbd.com/#guide">Guide</a>
+        <nav class="main" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="/#check">Check Result</a>
+      <a href="/gpa-calculator">GPA Calculator</a>
+      <a href="/#guide">Guide</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Education Boards <span class="caret" aria-hidden="true">&#9662;</span></button>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="/ssc-result-2026-dhaka-board" role="menuitem">Dhaka Board</a>
+          <a href="/ssc-result-2026-rajshahi-board" role="menuitem">Rajshahi Board</a>
+          <a href="/ssc-result-2026-chattogram-board" role="menuitem">Chattogram Board</a>
+          <a href="/ssc-result-2026-comilla-board" role="menuitem">Cumilla Board</a>
+          <a href="/ssc-result-2026-jashore-board" role="menuitem">Jashore Board</a>
+          <a href="/ssc-result-2026-sylhet-board" role="menuitem">Sylhet Board</a>
+          <a href="/ssc-result-2026-barishal-board" role="menuitem">Barishal Board</a>
+          <a href="/ssc-result-2026-dinajpur-board" role="menuitem">Dinajpur Board</a>
+          <a href="/ssc-result-2026-mymensingh-board" role="menuitem">Mymensingh Board</a>
+          <a href="/ssc-result-2026-madrasah-board" role="menuitem">Madrasah (Dakhil)</a>
+          <a href="/ssc-result-2026-technical-board" role="menuitem">Technical (Vocational)</a>
+        </div>
+      </div>
     </nav>
   </div>
 </header>
@@ -192,7 +238,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>2. Cookies used on this site</h2>
 
     <h3>2.1 Strictly necessary</h3>
-    <p>A very small number of cookies are needed for the site to load correctly and securely through our hosting and content-delivery provider. They keep the site available and help block malicious traffic. Without them the site would not work reliably, so they cannot be switched off from within the site &mdash; though you can still block them in your browser.</p>
+    <p>A very small number of cookies are needed for the site to load correctly and securely through our hosting and content-delivery provider. They keep the site available and help block malicious traffic. Without them the site would not work reliably, so they cannot be switched off from within the site, though you can still block them in your browser.</p>
 
     <h3>2.2 Analytics</h3>
     <p>We use Google Analytics to count visitors and see which pages are read. These cookies tell us how many people came, which guides were most useful, and whether pages worked on a given device. They do not tell us who you are.</p>
@@ -221,8 +267,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h2>4. Turning off personalised advertising</h2>
     <ul>
-      <li><a href="https://www.google.com/settings/ads" target="_blank" rel="noopener nofollow">Google Ads Settings</a> &mdash; switch off ad personalisation on Google services.</li>
-      <li><a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener nofollow">aboutads.info/choices</a> &mdash; opt out across participating networks.</li>
+      <li><a href="https://www.google.com/settings/ads" target="_blank" rel="noopener nofollow">Google Ads Settings</a>, switch off ad personalisation on Google services.</li>
+      <li><a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener nofollow">aboutads.info/choices</a>, opt out across participating networks.</li>
       <li><a href="https://optout.networkadvertising.org/" target="_blank" rel="noopener nofollow">Network Advertising Initiative opt-out</a></li>
       <li><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener nofollow">Google Analytics opt-out add-on</a></li>
     </ul>
@@ -233,11 +279,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>5. Managing cookies in your browser</h2>
     <p>Every major browser lets you see the cookies stored, delete them, and block future ones. The settings are usually under Privacy or Site settings:</p>
     <ul>
-      <li><strong>Chrome (Android and desktop)</strong> &mdash; Settings &rsaquo; Privacy and security &rsaquo; Third-party cookies / Delete browsing data</li>
-      <li><strong>Safari (iPhone and Mac)</strong> &mdash; Settings &rsaquo; Safari &rsaquo; Block All Cookies, or Clear History and Website Data</li>
-      <li><strong>Firefox</strong> &mdash; Settings &rsaquo; Privacy &amp; Security &rsaquo; Cookies and Site Data</li>
-      <li><strong>Edge</strong> &mdash; Settings &rsaquo; Cookies and site permissions</li>
-      <li><strong>Opera</strong> &mdash; Settings &rsaquo; Privacy &amp; security &rsaquo; Cookies</li>
+      <li><strong>Chrome (Android and desktop)</strong>, Settings &rsaquo; Privacy and security &rsaquo; Third-party cookies / Delete browsing data</li>
+      <li><strong>Safari (iPhone and Mac)</strong>, Settings &rsaquo; Safari &rsaquo; Block All Cookies, or Clear History and Website Data</li>
+      <li><strong>Firefox</strong>, Settings &rsaquo; Privacy &amp; Security &rsaquo; Cookies and Site Data</li>
+      <li><strong>Edge</strong>, Settings &rsaquo; Cookies and site permissions</li>
+      <li><strong>Opera</strong>, Settings &rsaquo; Privacy &amp; security &rsaquo; Cookies</li>
     </ul>
     <p>Most browsers also offer a private or incognito window, which discards cookies when you close it.</p>
 
@@ -270,10 +316,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="rule"></div>
     <p class="fine">This is an independent information website about the SSC Result 2026. We are not affiliated with, endorsed by, or connected to the Ministry of Education, the Inter-Education Board Coordination Committee, or any education board of Bangladesh. Always confirm your result on an official portal.</p>
-    <p class="copy">&copy; 2026 SSC Result 2026 &mdash; all rights reserved.</p>
+    <p class="copy">&copy; 2026 Exam Results BD. All rights reserved.</p>
   </div>
 </footer>
 
   <script src="/js/breadcrumb.js" defer></script>
+<script>
+/* Nav active-state + dropdown toggle */
+(function(){
+  var path = location.pathname.replace(/\/$/,'') || '/';
+  document.querySelectorAll('nav.main a[href]').forEach(function(a){
+    var href = a.getAttribute('href').replace(/\/$/,'');
+    if(href === path && !a.closest('.nav-dropdown-menu')) a.classList.add('active');
+  });
+  var tog=document.querySelector('.nav-dropdown-toggle');
+  if(tog){
+    tog.addEventListener('click',function(e){
+      e.stopPropagation();
+      var m=document.querySelector('.nav-dropdown-menu');
+      var open=m.classList.toggle('open');
+      tog.setAttribute('aria-expanded',open?'true':'false');
+    });
+    document.addEventListener('click',function(){
+      var m=document.querySelector('.nav-dropdown-menu');
+      if(m){m.classList.remove('open');tog.setAttribute('aria-expanded','false');}
+    });
+  }
+})();
+</script>
 </body>
 </html>
