@@ -103,13 +103,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <header>
   <div class="head">
-    <a class="crest" href="/"><img src="/assets/logo.webp" alt="Exam Results BD Logo" width="64" height="64"></a>
-    <a class="brand" href="/">Exam Results BD<small>Independent result information portal, all education boards, Bangladesh</small></a>
+    <a class="brand-link" href="/">
+      <span class="crest"><img src="/assets/logo.webp" alt="Exam Results BD Logo" width="64" height="64"></span>
+      <span class="brand">Exam Results BD<small>Independent result information portal, all education boards, Bangladesh</small></span>
+    </a>
     <nav aria-label="Main">
       <a href="/">Home</a>
       <a href="/#check">Check Result</a>
       <a href="/#guide">Guide</a>
-      <a href="/gpa-calculator">SSC GPA Calculator</a>
       <div class="nav-dropdown">
         <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">Education Boards <span class="caret" aria-hidden="true">&#9662;</span></button>
         <div class="nav-dropdown-menu" role="menu">
@@ -157,7 +158,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h2><span class="n">SECTION 01</span>When Will the Chattogram Board SSC Result 2026 Be Published?</h2>
     <p>The result was first scheduled for <strong>20 July 2026</strong>, then postponed; the boards have confirmed publication on <strong>10 August 2026</strong>, released at <strong>2:00 PM</strong> alongside every other board. A delay does not affect your marks. Trust only official Chattogram Board notices rather than the unofficial dates that spread each year, and check back here for updates as soon as a firm date is confirmed.</p>
-    <div class="callout gold"><p><strong>Please note:</strong> the SSC Result 2026 date of <strong>10 August 2026</strong> has been confirmed by the Inter-Education Board Coordination Committee, reported by <a href="https://en.prothomalo.com/youth/education/99z57nw2cz" target="_blank" rel="nofollow noopener">Prothom Alo</a> and <a href="https://www.dhakatribune.com/bangladesh/education/416092" target="_blank" rel="nofollow noopener">Dhaka Tribune</a> on 27 July 2026. We update this page if any official change is announced, so follow the announcement bar on our homepage.</p></div>
+    <div class="callout gold"><p><strong>Please note:</strong> the SSC Result 2026 date of <strong>10 August 2026</strong> has been confirmed by the Inter-Education Board Coordination Committee, reported by <a href="https://en.prothomalo.com/youth/education/99z57nw2cz" target="_blank" rel="noopener">Prothom Alo</a> and <a href="https://www.dhakatribune.com/bangladesh/education/416092" target="_blank" rel="noopener">Dhaka Tribune</a> on 27 July 2026. We update this page if any official change is announced, so follow the announcement bar on our homepage.</p></div>
 
     <h2><span class="n">SECTION 02</span>How to Check SSC Result 2026 Chattogram Board Online</h2>
     <p>Checking online reveals the <strong>full marksheet</strong> with a grade for every subject. Have your <strong>admit card</strong> (roll) and <strong>registration card</strong> (registration number) ready first.</p>
@@ -274,6 +275,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="/js/breadcrumb.js" defer></script>
+<script>
+/* Nav active-state: highlights the current page's menu item */
+(function(){
+  var path = location.pathname.replace(/\/$/,'') || '/';
+  document.querySelectorAll('nav a[href]').forEach(function(a){
+    var href = a.getAttribute('href').replace(/\/$/,'');
+    if(href === path || (path === '/' && (href === '/' || href === ''))){
+      if(!a.closest('.nav-dropdown-menu')) a.classList.add('active');
+    }
+  });
+  document.querySelectorAll('.nav-dropdown-menu a[href]').forEach(function(a){
+    if(a.getAttribute('href').replace(/\/$/,'') === path){
+      var t=document.querySelector('.nav-dropdown-toggle'); if(t) t.classList.add('active');
+    }
+  });
+})();
+</script>
 <script src="/js/nav.js" defer></script>
 </body>
 </html>
