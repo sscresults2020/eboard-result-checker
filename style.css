@@ -665,3 +665,66 @@ nav a:hover,
   nav a,.nav-dropdown-toggle{padding:.4rem .6rem;font-size:.83rem}
 }
 /* ── end homepage polish ──────────────────────── */
+
+
+/* ══════════════════════════════════════════════
+   RESULT POPUP MODAL  (for result.js)
+   Add to style.css. Uses existing :root variables.
+   ══════════════════════════════════════════════ */
+.result-modal{
+  position:fixed;inset:0;z-index:1000;
+  display:none;align-items:center;justify-content:center;
+  background:rgba(3,45,33,.55);padding:1rem;
+}
+.result-modal.show{display:flex;animation:rmFade .2s ease}
+@keyframes rmFade{from{opacity:0}}
+
+.result-modal-box{
+  background:#fff;border-radius:14px;max-width:440px;width:100%;
+  padding:1.6rem 1.5rem 1.4rem;position:relative;
+  box-shadow:0 20px 50px rgba(3,45,33,.30);
+  animation:rmRise .25s ease;
+}
+@keyframes rmRise{from{transform:translateY(10px);opacity:0}}
+
+.result-modal-close{
+  position:absolute;top:.7rem;right:.8rem;border:none;background:none;
+  font-size:1.6rem;line-height:1;color:var(--muted);cursor:pointer;padding:.2rem;
+}
+.result-modal-close:hover{color:var(--red)}
+
+.result-modal-box h3{
+  font-family:var(--display);font-size:1.2rem;font-weight:800;
+  color:var(--green-deep);margin:0 0 .5rem;padding-right:1.5rem;
+}
+.result-modal-box p{font-size:.92rem;color:#2b3a34;margin:0 0 1rem;line-height:1.6}
+
+.result-modal-details{
+  background:var(--green-tint);border:1px solid var(--line);border-radius:9px;
+  padding:.7rem .9rem;margin:0 0 1.1rem;
+}
+.rmd-row{display:flex;justify-content:space-between;gap:1rem;padding:.28rem 0;font-size:.88rem}
+.rmd-row + .rmd-row{border-top:1px solid rgba(0,0,0,.05)}
+.rmd-row span{color:var(--muted)}
+.rmd-row b{font-family:var(--mono);font-weight:600;color:var(--green-deep)}
+
+.result-modal-actions{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.result-modal-go{
+  flex:1 1 auto;text-align:center;font-family:var(--display);font-weight:700;font-size:.92rem;
+  text-decoration:none;background:var(--green);color:#fff;padding:.75rem 1.1rem;border-radius:8px;
+  transition:background .15s;
+}
+.result-modal-go:hover{background:var(--green-deep)}
+.result-modal-go:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.result-modal-cancel{
+  font-family:var(--body);font-weight:600;font-size:.9rem;
+  border:1px solid var(--line);background:#fff;color:var(--muted);
+  padding:.75rem 1.1rem;border-radius:8px;cursor:pointer;
+}
+.result-modal-cancel:hover{border-color:var(--muted);color:var(--ink)}
+
+.result-modal-note{
+  font-size:.78rem !important;color:var(--muted) !important;
+  margin:1rem 0 0 !important;line-height:1.5 !important;
+}
+/* ── end result popup modal ───────────────────── */
