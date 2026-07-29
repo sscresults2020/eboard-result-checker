@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Node (if you use npm later)
+node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Build folders
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# OS files
+Thumbs.db
+Desktop.ini
