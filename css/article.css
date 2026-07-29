@@ -226,9 +226,16 @@
 .related a:hover{border-color:var(--green)}
 
 /* ── SMS format figure ────────────────────────── */
-.sms-figure{margin:1.5rem 0;text-align:center}
+.sms-figure{margin:1.5rem auto;text-align:center}
 .sms-figure img{display:block;width:100%;max-width:720px;height:auto;margin:0 auto;border-radius:12px}
 .sms-figure figcaption{display:block;font-size:.8rem;color:var(--muted);margin-top:.5rem;text-align:center}
+
+/* center figures + inline SVG charts (bar/donut) on all screens.
+   The figure itself gets margin:0 auto so a max-width figure
+   sits centered on desktop instead of hugging the left. */
+.sms-figure svg{display:block;margin:0 auto;width:100%;height:auto}
+.doc figure,.guide figure{margin-left:auto;margin-right:auto}
+.doc figure svg,.guide figure svg{display:block;margin:0 auto}
 
 /* ── end-of-page fine print ───────────────────── */
 .doc .pagenote{font-size:.85rem;color:var(--muted);margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--line)}
