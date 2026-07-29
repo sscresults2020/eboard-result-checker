@@ -728,3 +728,17 @@ nav a:hover,
   margin:1rem 0 0 !important;line-height:1.5 !important;
 }
 /* ── end result popup modal ───────────────────── */
+
+/* copy buttons in the details rows */
+.rmd-copyrow{align-items:center}
+.rmd-val{display:flex;align-items:center;gap:.6rem}
+.rmd-copy{
+  font-family:var(--body);font-size:.72rem;font-weight:600;
+  border:1px solid var(--green);background:var(--green-tint);color:var(--green-deep);
+  padding:.2rem .55rem;border-radius:5px;cursor:pointer;line-height:1.2;
+  transition:background .15s,color .15s,border-color .15s;
+}
+.rmd-copy:hover{background:var(--green);color:#fff}
+.rmd-copy.copied{background:var(--green);color:#fff;border-color:var(--green)}
+.rmd-copy:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+/* ── end copy buttons ─────────────────────────── */
