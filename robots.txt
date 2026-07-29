@@ -1,6 +1,20 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow Google's ad crawlers (AdSense)
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+# Explicitly allow Google Search + AI
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 # Block AI training crawlers
 User-agent: Amazonbot
 Disallow: /
@@ -19,9 +33,6 @@ Disallow: /
 
 User-agent: CloudflareBrowserRenderingCrawler
 Disallow: /
-
-User-agent: Google-Extended
-Allow: /
 
 User-agent: GPTBot
 Disallow: /
