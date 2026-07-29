@@ -21,7 +21,7 @@ User-agent: CloudflareBrowserRenderingCrawler
 Disallow: /
 
 User-agent: Google-Extended
-allow: /
+Allow: /
 
 User-agent: GPTBot
 Disallow: /
