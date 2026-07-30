@@ -18,6 +18,13 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+# Allow ChatGPT search + live fetch (students use ChatGPT)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 # Block AI training crawlers
 User-agent: Amazonbot
 Disallow: /
