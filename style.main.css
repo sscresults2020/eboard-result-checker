@@ -742,3 +742,28 @@ nav a:hover,
 .rmd-copy.copied{background:var(--green);color:#fff;border-color:var(--green)}
 .rmd-copy:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 /* ── end copy buttons ─────────────────────────── */
+
+/* ── FOOTER SOCIAL ICONS ────────────────────────── */
+.social-row{
+  display:flex;justify-content:center;align-items:center;
+  gap:.9rem;margin:1.3rem 0 0;flex-wrap:wrap;
+}
+.social-icon{
+  display:flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.08);
+  color:#fff;transition:background .15s,transform .15s,color .15s;
+}
+.social-icon svg{width:17px;height:17px}
+.social-icon:not(.is-disabled):hover{
+  background:var(--gold);color:var(--green-deep);transform:translateY(-2px);
+}
+.social-icon:not(.is-disabled):focus-visible{
+  outline:2px solid var(--gold);outline-offset:2px;
+}
+.social-icon.is-disabled{
+  background:rgba(255,255,255,.05);
+  color:rgba(255,255,255,.28);
+  cursor:default;pointer-events:none;
+}
+/* ── end footer social icons ──────────────────────── */
