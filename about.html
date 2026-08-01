@@ -337,29 +337,7 @@ nav.main a.active,.nav-dropdown-toggle.active{background:rgba(255,255,255,.16);c
   </div>
 </footer>
 
-  <script src="/js/breadcrumb.js" defer></script>
-<script>
-/* Nav active-state + dropdown toggle */
-(function(){
-  var path = location.pathname.replace(/\/$/,'') || '/';
-  document.querySelectorAll('nav.main a[href]').forEach(function(a){
-    var href = a.getAttribute('href').replace(/\/$/,'');
-    if(href === path && !a.closest('.nav-dropdown-menu')) a.classList.add('active');
-  });
-  var tog=document.querySelector('.nav-dropdown-toggle');
-  if(tog){
-    tog.addEventListener('click',function(e){
-      e.stopPropagation();
-      var m=document.querySelector('.nav-dropdown-menu');
-      var open=m.classList.toggle('open');
-      tog.setAttribute('aria-expanded',open?'true':'false');
-    });
-    document.addEventListener('click',function(){
-      var m=document.querySelector('.nav-dropdown-menu');
-      if(m){m.classList.remove('open');tog.setAttribute('aria-expanded','false');}
-    });
-  }
-})();
-</script>
+<script src="/js/breadcrumb.js" defer></script>
+<script src="/js/nav.js" defer></script>
 </body>
 </html>

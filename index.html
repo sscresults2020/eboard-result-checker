@@ -1478,25 +1478,6 @@ Point
      block does not change it.
      ─────────────────────────────────────────────── */
 </script>
-<script>
-/* Nav active-state: highlights the current page's menu item */
-(function(){
-  var path = location.pathname.replace(/\/$/,'') || '/';
-  document.querySelectorAll('nav a[href]').forEach(function(a){
-    var href = a.getAttribute('href').replace(/\/$/,'');
-    if(href === path || (path === '/' && (href === '/' || href === ''))){
-      if(!a.closest('.nav-dropdown-menu')) a.classList.add('active');
-    }
-  });
-  // if a dropdown board page is active, mark the toggle
-  var activeInMenu = document.querySelector('.nav-dropdown-menu a[href]');
-  document.querySelectorAll('.nav-dropdown-menu a[href]').forEach(function(a){
-    if(a.getAttribute('href').replace(/\/$/,'') === path){
-      var t=document.querySelector('.nav-dropdown-toggle'); if(t) t.classList.add('active');
-    }
-  });
-})();
-</script>
 <script src="/js/nav.js" defer></script>
   <script src="/js/result.js" defer></script>
 </body>
