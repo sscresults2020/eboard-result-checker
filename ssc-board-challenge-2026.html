@@ -3,15 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google Analytics (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6M0CP1M3Z1"></script>
+<!-- Google tag (gtag.js) — deferred load for performance -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-6M0CP1M3Z1');
+
+  // Load the gtag.js library after the page is interactive, so it stays
+  // out of the critical render path (helps LCP + avoids forced reflow at load).
+  window.addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6M0CP1M3Z1';
+    document.head.appendChild(s);
+  });
 </script>
-<!-- End Google Analytics -->
 <title>SSC Board Challenge 2026: Re-Scrutiny Application, Fee and Process | Exam Results BD</title>
 <meta name="description" content="How to apply for the SSC board challenge 2026 (re-scrutiny) by Teletalk SMS. The RSC format, subject codes, the 150 Taka per subject fee, the deadline and how to check the result.">
 <meta name="keywords" content="ssc board challenge 2026, ssc re-scrutiny 2026, ssc khata challenge 2026, ssc board challenge application, ssc rescrutiny process, rsc 16222, ssc result recheck 2026">

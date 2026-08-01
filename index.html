@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Analytics (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6M0CP1M3Z1"></script>
+  <!-- Google tag (gtag.js) — deferred load for performance -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-6M0CP1M3Z1');
+
+  // Load the gtag.js library after the page is interactive, so it stays
+  // out of the critical render path (helps LCP + avoids forced reflow at load).
+  window.addEventListener('load', function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6M0CP1M3Z1';
+    document.head.appendChild(s);
+  });
 </script>
-<!-- End Google Analytics -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
