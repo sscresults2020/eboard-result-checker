@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) — deferred load for performance -->
+  <!-- Google tag (gtag.js) — deferred load for performance -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-6M0CP1M3Z1');
 
-  // Load the gtag.js library after the page is interactive, so it stays
-  // out of the critical render path (helps LCP + avoids forced reflow at load).
   window.addEventListener('load', function () {
     var s = document.createElement('script');
     s.async = true;
@@ -17,6 +15,7 @@
     document.head.appendChild(s);
   });
 </script>
+<!-- End Google Analytics -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Page Not Found (404) | Exam Results BD</title>
@@ -34,10 +33,10 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/examresultsbd-favicon-package/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"></noscript>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=optional">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=optional"></noscript>
+<link rel="stylesheet" href="/style.css">
 <style>
 :root{
   --green:#05614a; --green-deep:#033a2c; --green-tint:#e7f0ec;
@@ -48,7 +47,7 @@
   --mono:"IBM Plex Mono","Courier New",monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
 body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.65;font-size:16px;
   display:flex;flex-direction:column;min-height:100vh}
 h1,h2,h3,h4{font-family:var(--display);letter-spacing:-.015em;line-height:1.22}
@@ -56,7 +55,7 @@ strong,b{font-weight:600;color:var(--ink)}
 a{color:var(--green)}
 
 /* header */
-header{background:var(--green-deep);color:#fff;border-bottom:3px solid var(--gold)}
+header{background:var(--green-deep);color:#fff;border-bottom:2px solid var(--gold);box-shadow:0 2px 10px rgba(0,0,0,.08)}
 .head{display:flex;align-items:center;gap:.85rem;padding:.9rem 1rem;max-width:1060px;margin:0 auto;flex-wrap:wrap}
 .crest{width:50px;height:50px;flex:0 0 50px;border-radius:8px;background:#fff;padding:5px;
   display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px rgba(255,255,255,.25)}
@@ -65,7 +64,7 @@ header{background:var(--green-deep);color:#fff;border-bottom:3px solid var(--gol
 .brand small{display:block;font-family:var(--body);font-size:.74rem;font-weight:400;opacity:.82;letter-spacing:0}
 
 /* banner */
-.page-head{background:var(--green);color:#fff;padding:2.4rem 1rem 3.4rem;text-align:center;position:relative;overflow:hidden}
+.page-head{background:var(--green);color:#fff;padding:2.4rem 1rem 4.6rem;text-align:center;position:relative;overflow:hidden}
 .code{
   font-family:var(--mono);font-weight:600;font-size:clamp(3.4rem,15vw,6rem);
   line-height:1;letter-spacing:.06em;color:rgba(255,255,255,.16);
@@ -79,7 +78,7 @@ header{background:var(--green-deep);color:#fff;border-bottom:3px solid var(--gol
 
 /* content */
 main{flex:1 0 auto}
-.doc-wrap{max-width:860px;margin:-1.8rem auto 3rem;padding:0 1rem;width:100%}
+.doc-wrap{max-width:860px;margin:-1.8rem auto 3rem;padding:0 1rem;width:100%;position:relative;z-index:2}
 .doc{background:var(--card);border:1px solid var(--line);border-radius:12px;
   box-shadow:0 12px 30px rgba(3,45,33,.09);padding:1.9rem 1.6rem 2.1rem}
 @media(max-width:560px){.doc{padding:1.4rem 1.1rem 1.6rem}}
@@ -144,11 +143,30 @@ footer{background:var(--green-deep);color:#c3d8d0;padding:2rem 1rem 1.5rem;font-
 
 /* nav dropdown (Education Boards) */
 
+
+/* nav (header) — self-contained so 404 does not depend on style.css */
+nav{margin-left:auto;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center;position:relative}
+nav a{color:#fff;text-decoration:none;font-size:.86rem;font-weight:500;padding:.42rem .7rem;border-radius:5px}
+nav a:hover{background:rgba(255,255,255,.10)}
+nav a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{color:#fff;background:none;border:none;font-family:var(--body);font-size:.86rem;font-weight:500;padding:.42rem .7rem;border-radius:5px;cursor:pointer;display:flex;align-items:center;gap:.3rem}
+.nav-dropdown-toggle:hover{background:rgba(255,255,255,.10)}
+.nav-dropdown-toggle:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.nav-dropdown-toggle .caret{transition:transform .2s}
+.nav-dropdown-toggle[aria-expanded="true"] .caret{transform:rotate(180deg)}
+.nav-dropdown-menu{display:none;position:absolute;top:100%;right:0;margin-top:.45rem;background:#fff;border:1px solid var(--line);border-radius:9px;box-shadow:0 10px 28px rgba(3,45,33,.18);min-width:220px;padding:.4rem;z-index:60}
+.nav-dropdown-menu.open{display:block}
+.nav-dropdown-menu a{display:block;color:var(--ink);font-size:.88rem;font-weight:500;padding:.55rem .7rem;border-radius:5px}
+.nav-dropdown-menu a:hover{background:var(--green-tint);color:var(--green-deep)}
 .brand-link{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:inherit}
 .brand-link .brand{display:flex;flex-direction:column;justify-content:center}
 
 @media(max-width:640px){
-
+  .nav-dropdown{width:100%}
+  .nav-dropdown-menu{position:static;box-shadow:none;border:none;min-width:0;width:100%;background:rgba(255,255,255,.08);margin-top:.3rem}
+  .nav-dropdown-menu a{color:#fff}
+  .nav-dropdown-menu a:hover{background:rgba(255,255,255,.15);color:#fff}
 }
 @media(max-width:600px){
   .head{gap:.55rem;padding:.7rem .85rem;flex-wrap:wrap}
@@ -156,7 +174,8 @@ footer{background:var(--green-deep);color:#c3d8d0;padding:2rem 1rem 1.5rem;font-
   .crest{width:42px;height:42px;flex:0 0 42px}
   .brand{font-size:1rem;line-height:1.12}
   .brand small{font-size:.66rem}
-
+  nav{width:100%;margin-left:0;margin-top:.5rem;gap:.12rem;justify-content:flex-start;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.15);padding-top:.5rem}
+  nav a,.nav-dropdown-toggle{padding:.4rem .6rem;font-size:.83rem}
 }
 
 .social-row{display:flex;justify-content:center;align-items:center;gap:.9rem;margin:1.3rem 0 0;flex-wrap:wrap}
@@ -175,7 +194,7 @@ footer{background:var(--green-deep);color:#c3d8d0;padding:2rem 1rem 1.5rem;font-
       <span class="crest"><img src="/assets/logo.webp" alt="Exam Results BD Logo" width="64" height="64"></span>
       <span class="brand">Exam Results BD<small>Independent result information portal, all education boards, Bangladesh</small></span>
     </a>
-        <nav aria-label="Main">
+        <nav class="main" aria-label="Main">
       <a href="/">Home</a>
       <a href="/#check">Check Result</a>
      
